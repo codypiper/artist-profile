@@ -13,7 +13,7 @@ import background from "@pub/images/homeBackground.jpg";
 
 const Home = () => (
   <main className="relative flex min-h-screen flex-col items-center justify-center">
-    <h1 className="mb-3 text-center text-3xl font-semibold drop-shadow-md">
+    <h1 className="mb-3 text-center text-3xl font-bold drop-shadow-md">
       {'"Things May Change" video:'}
     </h1>
     <div className="mb-16 w-[50rem] max-w-[100vw] shadow-md">
