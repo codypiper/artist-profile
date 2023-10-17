@@ -13,10 +13,10 @@ import background from "@pub/images/homeBackground.jpg";
 
 const Home = () => (
   <main className="relative flex min-h-screen flex-col items-center justify-center">
-    <h1 className="mb-3 text-center text-3xl font-bold drop-shadow-md">
+    <h1 className="drop-shadow-dark mb-3 text-center text-3xl font-bold">
       {'"Things May Change" video:'}
     </h1>
-    <div className="mb-16 w-[50rem] max-w-[100vw] shadow-md">
+    <div className="mb-16 w-[50rem] max-w-[100vw] shadow-2xl shadow-black">
       <YouTubePlayer
         videoId="NCkYqz7KZSA"
         title="Things May Change (Official Video)"

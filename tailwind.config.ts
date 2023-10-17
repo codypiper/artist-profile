@@ -9,6 +9,7 @@ const config: Config = {
     extend: {
       dropShadow: {
         glow: "0 0 3px",
+        dark: "0 0 6px rgb(0 0 0)",
       },
     },
   },
