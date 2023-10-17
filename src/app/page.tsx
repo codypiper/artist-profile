@@ -12,8 +12,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import background from "@pub/images/homeBackground.jpg";
 
 const Home = () => (
-  <main className="relative flex min-h-screen flex-col items-center justify-center">
-    <h1 className="drop-shadow-dark mb-3 text-center text-3xl font-bold">
+  <main className="relative flex h-screen flex-col items-center justify-center py-4">
+    <h1 className="drop-shadow-dark mb-3 px-4 text-center text-3xl font-bold">
       {'"Things May Change" video:'}
     </h1>
     <div className="mb-16 w-[50rem] max-w-[100vw] shadow-2xl shadow-black">
