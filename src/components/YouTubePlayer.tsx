@@ -5,7 +5,7 @@ interface YouTubePlayerProps {
 
 const YouTubePlayer = ({ videoId, title }: YouTubePlayerProps) => (
   <iframe
-    src={`https://www.youtube.com/embed/${videoId}`}
+    src={`https://www.youtube.com/embed/${videoId}?rel=0`}
     title={title}
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
     allowFullScreen
