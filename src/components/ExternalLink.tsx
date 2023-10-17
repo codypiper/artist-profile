@@ -8,7 +8,7 @@ const ExternalLink = ({ href, children }: ExternalLinkProps) => (
     href={href}
     target="_blank"
     rel="noreferrer"
-    className="hover:drop-shadow-glow transition-all"
+    className="hover:drop-shadow-glow transition duration-200"
   >
     {children}
   </a>
