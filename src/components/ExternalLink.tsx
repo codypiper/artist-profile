@@ -1,14 +1,20 @@
+import classNames from "classnames";
+
 interface ExternalLinkProps {
   href: string;
   children: React.ReactNode;
+  className?: string;
 }
 
-const ExternalLink = ({ href, children }: ExternalLinkProps) => (
+const ExternalLink = ({ href, children, className }: ExternalLinkProps) => (
   <a
     href={href}
     target="_blank"
     rel="noreferrer"
-    className="hover:drop-shadow-glow transition duration-200"
+    className={classNames(
+      "transition duration-200 hover:drop-shadow-glow",
+      className,
+    )}
   >
     {children}
   </a>
