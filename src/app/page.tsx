@@ -1,5 +1,4 @@
 import BackgroundImage from "@/components/BackgroundImage";
-import ExternalLink from "@/components/ExternalLink";
 import YouTubePlayer from "@/components/YouTubePlayer";
 import {
   faFacebook,
@@ -8,8 +7,8 @@ import {
   faXTwitter,
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import background from "@pub/images/homeBackground.jpg";
+import IconLink from "./components/IconLink";
 
 const Home = () => (
   <main className="relative flex h-screen flex-col items-center justify-center py-4">
@@ -24,44 +23,19 @@ const Home = () => (
     </div>
     <ul className="flex flex-row items-center gap-4">
       <li>
-        <ExternalLink
-          href="https://instagram.com/codycpiper"
-          className="drop-shadow-dark"
-        >
-          <FontAwesomeIcon icon={faInstagram} size="2xl" fixedWidth />
-        </ExternalLink>
+        <IconLink href="https://instagram.com/codycpiper" icon={faInstagram} />
       </li>
       <li>
-        <ExternalLink
-          href="https://tiktok.com/@codycpiper"
-          className="drop-shadow-dark"
-        >
-          <FontAwesomeIcon icon={faTiktok} size="2xl" fixedWidth />
-        </ExternalLink>
+        <IconLink href="https://tiktok.com/@codycpiper" icon={faTiktok} />
       </li>
       <li>
-        <ExternalLink
-          href="https://facebook.com/codypiper"
-          className="drop-shadow-dark"
-        >
-          <FontAwesomeIcon icon={faFacebook} size="2xl" fixedWidth />
-        </ExternalLink>
+        <IconLink href="https://facebook.com/codypiper" icon={faFacebook} />
       </li>
       <li>
-        <ExternalLink
-          href="https://x.com/codypiper"
-          className="drop-shadow-dark"
-        >
-          <FontAwesomeIcon icon={faXTwitter} size="2xl" fixedWidth />
-        </ExternalLink>
+        <IconLink href="https://x.com/codypiper" icon={faXTwitter} />
       </li>
       <li>
-        <ExternalLink
-          href="https://youtube.com/@codypiper"
-          className="drop-shadow-dark"
-        >
-          <FontAwesomeIcon icon={faYoutube} size="2xl" fixedWidth />
-        </ExternalLink>
+        <IconLink href="https://youtube.com/@codypiper" icon={faYoutube} />
       </li>
     </ul>
     <BackgroundImage
