@@ -7,11 +7,11 @@ import {
   faXTwitter,
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
-import background from "@pub/images/homeBackground.jpg";
+import tree from "@pub/images/backgrounds/tree.jpg";
 import IconLink from "./components/IconLink";
 
 const Home = () => (
-  <main className="relative flex h-screen flex-col items-center justify-center py-4">
+  <main className="relative flex min-h-screen flex-col items-center justify-center py-4">
     <h1 className="mb-3 px-4 text-center text-3xl font-bold drop-shadow-dark">
       {'"Things May Change" video:'}
     </h1>
@@ -38,10 +38,7 @@ const Home = () => (
         <IconLink href="https://youtube.com/@codypiper" icon={faYoutube} />
       </li>
     </ul>
-    <BackgroundImage
-      alt="Cody Piper sitting on a tree trunk"
-      src={background}
-    />
+    <BackgroundImage alt="Cody Piper sitting on a tree trunk" src={tree} />
   </main>
 );
 
