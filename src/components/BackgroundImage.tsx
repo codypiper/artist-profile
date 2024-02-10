@@ -12,7 +12,6 @@ const BackgroundImage = ({ src, alt }: BackgroundImageProps) => (
     placeholder="blur"
     quality={100}
     fill
-    sizes="100vw"
     className="-z-50 object-cover opacity-50"
   />
 );
