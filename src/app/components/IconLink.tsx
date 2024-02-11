@@ -8,7 +8,7 @@ interface IconLinkProps {
 }
 
 const IconLink = ({ href, icon }: IconLinkProps) => (
-  <ExternalLink href={href} className="drop-shadow-dark">
+  <ExternalLink href={href}>
     <FontAwesomeIcon icon={icon} size="2xl" fixedWidth />
   </ExternalLink>
 );

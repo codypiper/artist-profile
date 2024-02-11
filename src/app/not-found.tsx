@@ -8,9 +8,7 @@ const NotFound = () => (
     <p className="mb-10 text-center text-xl font-semibold drop-shadow-dark">
       not found
     </p>
-    <InternalLink href="/" className="drop-shadow-dark">
-      return home
-    </InternalLink>
+    <InternalLink href="/">return home</InternalLink>
     <BackgroundImage
       src={running}
       alt="Blurry picture of Cody Piper running in the street at night"
