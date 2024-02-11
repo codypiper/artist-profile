@@ -11,7 +11,7 @@ import tree from "@pub/images/backgrounds/tree.jpg";
 import IconLink from "./components/IconLink";
 
 const Home = () => (
-  <main className="relative flex min-h-screen flex-col items-center justify-center py-4">
+  <main className="relative flex min-h-screen flex-col items-center justify-center py-20">
     <h1 className="mb-3 px-4 text-center text-3xl font-bold drop-shadow-dark">
       {'"Things May Change" video:'}
     </h1>
