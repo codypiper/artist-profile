@@ -14,11 +14,11 @@ export const metadata: Metadata = {
 };
 
 const Music = () => (
-  <main className="relative flex min-h-screen flex-col items-center justify-center py-40">
-    <h1 className="mb-10 px-4 text-center text-3xl font-bold drop-shadow-dark">
+  <main className="relative flex min-h-screen flex-col items-center justify-center px-4 py-40">
+    <h1 className="mb-10 text-center text-3xl font-bold drop-shadow-dark">
       Music
     </h1>
-    <ol className="flex gap-5">
+    <ol className="flex flex-wrap justify-center gap-6">
       <li>
         <Record
           title="Things May Change"
