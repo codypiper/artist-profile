@@ -1,6 +1,6 @@
 import BackgroundImage from "@/components/BackgroundImage";
 import RecordType from "@/types/RecordType";
-import tree from "@pub/images/backgrounds/tree.jpg";
+import crosswalk from "@pub/images/backgrounds/crosswalk.jpg";
 import bygones from "@pub/images/records/bygones.jpg";
 import iRemember from "@pub/images/records/i-remember.jpg";
 import itsOnlyYou from "@pub/images/records/its-only-you.jpg";
@@ -65,7 +65,10 @@ const Music = () => (
         />
       </li>
     </ol>
-    <BackgroundImage alt="Cody Piper sitting on a tree trunk" src={tree} />
+    <BackgroundImage
+      alt="Cody Piper standing in a crosswalk at night"
+      src={crosswalk}
+    />
   </main>
 );
 
