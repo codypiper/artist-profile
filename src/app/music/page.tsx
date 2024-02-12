@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 };
 
 const Music = () => (
-  <main className="relative flex min-h-screen flex-col items-center justify-center py-20">
+  <main className="relative flex min-h-screen flex-col items-center justify-center py-40">
     <h1 className="mb-10 px-4 text-center text-3xl font-bold drop-shadow-dark">
       Music
     </h1>
