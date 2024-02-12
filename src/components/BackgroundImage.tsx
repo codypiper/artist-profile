@@ -9,6 +9,7 @@ const BackgroundImage = ({ src, alt }: BackgroundImageProps) => (
   <Image
     src={src}
     alt={alt}
+    priority
     placeholder="blur"
     quality={100}
     fill
