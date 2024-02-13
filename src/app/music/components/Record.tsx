@@ -1,14 +1,8 @@
 import ExternalLink from "@/components/ExternalLink";
-import RecordType from "@/types/RecordType";
-import Image, { StaticImageData } from "next/image";
+import IRecord from "@/types/Record";
+import Image from "next/image";
 
-interface RecordProps {
-  title: string;
-  href: string;
-  image: StaticImageData;
-  type: RecordType;
-  date: Date;
-}
+type RecordProps = IRecord;
 
 const Record = ({ title, href, image, type, date }: RecordProps) => (
   <ExternalLink href={href}>
