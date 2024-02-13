@@ -11,6 +11,7 @@ const Record = ({ title, href, image, type, date }: RecordProps) => (
         className="mb-2"
         src={image}
         alt={`${title} cover artwork`}
+        priority
         height={250}
         width={250}
       />
