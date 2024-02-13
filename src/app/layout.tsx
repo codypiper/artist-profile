@@ -12,7 +12,7 @@ const manrope = Manrope({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Cody Piper",
-  description: "Official website of singer/songwriter Cody Piper",
+  description: "Official website of singer-songwriter Cody Piper",
   metadataBase: new URL("https://codypipermedia.com"),
 };
 
