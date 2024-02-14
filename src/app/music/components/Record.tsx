@@ -18,9 +18,7 @@ const Record = ({ title, href, image, type, date }: RecordProps) => (
       <h2 className="mb-1 text-center font-bold">{title}</h2>
       <h3 className="text-center text-sm font-thin italic">
         {`${type} \u2014 ${date.toLocaleDateString("en-US", {
-          month: "numeric",
-          day: "numeric",
-          year: "2-digit",
+          dateStyle: "short",
           timeZone: "UTC",
         })}`}
       </h3>
