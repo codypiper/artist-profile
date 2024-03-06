@@ -16,6 +16,13 @@ const shows: Show[] = [
     href: "https://www.bandsintown.com/e/105261838",
   },
   {
+    name: "Solo at the airport",
+    venue: "PIT Airport (Airside)",
+    city: "Pittsburgh, PA",
+    date: new Date("2024-04-15T15:00"),
+    href: "https://www.bandsintown.com/e/105266385",
+  },
+  {
     name: "w/ Julia Norah",
     venue: "Jenks1929",
     city: "Akron, OH",
