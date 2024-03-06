@@ -1,5 +1,5 @@
 import BackgroundImage from "@/components/BackgroundImage";
-import InternalLink from "@/components/InternalLink";
+import Link from "@/components/Link";
 import running from "@pub/images/backgrounds/running.jpg";
 
 const NotFound = () => (
@@ -8,7 +8,9 @@ const NotFound = () => (
     <p className="mb-10 text-center text-xl font-semibold drop-shadow-dark">
       not found
     </p>
-    <InternalLink href="/">return home</InternalLink>
+    <Link href="/" isInternal>
+      return home
+    </Link>
     <BackgroundImage
       src={running}
       alt="Blurry picture of Cody Piper running in the street at night"

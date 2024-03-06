@@ -1,4 +1,4 @@
-import ExternalLink from "@/components/ExternalLink";
+import Link from "@/components/Link";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -8,9 +8,9 @@ interface IconLinkProps {
 }
 
 const IconLink = ({ href, icon }: IconLinkProps) => (
-  <ExternalLink href={href}>
+  <Link href={href}>
     <FontAwesomeIcon icon={icon} size="2xl" fixedWidth />
-  </ExternalLink>
+  </Link>
 );
 
 export default IconLink;

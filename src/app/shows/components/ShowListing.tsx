@@ -1,4 +1,4 @@
-import ExternalLink from "@/components/ExternalLink";
+import ButtonLink from "@/components/ButtonLink";
 import Show from "@/types/Show";
 
 type ShowListingProps = Show;
@@ -33,11 +33,7 @@ const ShowListing = ({ name, venue, city, date, href }: ShowListingProps) => (
         <div className="text-subtext">{city}</div>
       </div>
     </div>
-    <ExternalLink href={href}>
-      <button className="min-w-16 rounded-full border border-white p-2">
-        link
-      </button>
-    </ExternalLink>
+    <ButtonLink href={href}>link</ButtonLink>
   </li>
 );
 

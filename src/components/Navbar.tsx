@@ -1,8 +1,8 @@
 "use client";
 
+import Link from "@/components/Link";
 import routes from "@/constants/routes";
 import { usePathname } from "next/navigation";
-import InternalLink from "./InternalLink";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -12,9 +12,13 @@ const Navbar = () => {
       <ul className="flex items-center justify-center gap-8">
         {routes.map((route) => (
           <li key={route.page}>
-            <InternalLink href={route.path} disabled={pathname === route.path}>
+            <Link
+              href={route.path}
+              disabled={pathname === route.path}
+              isInternal
+            >
               {route.page}
-            </InternalLink>
+            </Link>
           </li>
         ))}
       </ul>
