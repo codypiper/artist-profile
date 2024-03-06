@@ -10,6 +10,10 @@ const routes: Route[] = [
     page: Page.MUSIC,
     path: "/music",
   },
+  {
+    page: Page.SHOWS,
+    path: "/shows",
+  },
 ];
 
 export default routes;
