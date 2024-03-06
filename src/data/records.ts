@@ -1,5 +1,5 @@
+import RecordType from "@/enums/RecordType";
 import Record from "@/types/Record";
-import RecordType from "@/types/RecordType";
 import bygones from "@pub/images/records/bygones.jpg";
 import iRemember from "@pub/images/records/i-remember.jpg";
 import itsOnlyYou from "@pub/images/records/its-only-you.jpg";

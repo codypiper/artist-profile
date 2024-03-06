@@ -1,4 +1,4 @@
-import Page from "@/types/Page";
+import Page from "@/enums/Page";
 import Route from "@/types/Route";
 
 const routes: Route[] = [
