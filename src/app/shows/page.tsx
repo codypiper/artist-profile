@@ -1,5 +1,5 @@
 import BackgroundImage from "@/components/BackgroundImage";
-import shows from "@/constants/shows";
+import shows from "@/data/shows";
 import clouds from "@pub/images/backgrounds/clouds.jpg";
 import { Metadata } from "next";
 import ShowListing from "./components/ShowListing";

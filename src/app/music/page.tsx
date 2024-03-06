@@ -1,5 +1,5 @@
 import BackgroundImage from "@/components/BackgroundImage";
-import records from "@/constants/records";
+import records from "@/data/records";
 import crosswalk from "@pub/images/backgrounds/crosswalk.jpg";
 import { Metadata } from "next";
 import RecordLink from "./components/RecordLink";
