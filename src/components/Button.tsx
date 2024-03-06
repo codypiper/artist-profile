@@ -6,7 +6,11 @@ interface ButtonProps {
   noShadow?: boolean;
 }
 
-const Button = ({ children, type = "button", noShadow }: ButtonProps) => (
+const Button = ({
+  children,
+  type = "button",
+  noShadow = false,
+}: ButtonProps) => (
   <button
     type={type}
     className={classNames(
