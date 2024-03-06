@@ -5,15 +5,12 @@ type ShowListingProps = Show;
 
 const ShowListing = ({ name, venue, city, date, href }: ShowListingProps) => (
   <li className="border-dim flex flex-row items-center border-b py-4 last:border-b-0 max-sm:justify-between sm:gap-8">
-    <div className="flex drop-shadow-dark max-sm:flex-col sm:grow sm:items-baseline sm:justify-between sm:gap-4">
-      <h2 className="text-balance text-left font-semibold sm:order-2 sm:grow">
-        {name}
-      </h2>
+    <div className="flex drop-shadow-dark max-sm:flex-col sm:grow sm:justify-between sm:gap-4">
       <time
-        className="text-sm max-sm:ml-4 max-sm:flex max-sm:justify-start max-sm:gap-2 sm:order-1 sm:shrink-0 sm:basis-24"
+        className="max-sm:flex max-sm:justify-start max-sm:gap-2 sm:shrink-0 sm:basis-24"
         dateTime={date.toISOString()}
       >
-        <div>
+        <div className="font-semibold">
           {`${date.toLocaleDateString("en-US", {
             month: "short",
             day: "numeric",
@@ -21,14 +18,15 @@ const ShowListing = ({ name, venue, city, date, href }: ShowListingProps) => (
             weekday: "short",
           })}`}
         </div>
-        <div className="text-dim">
+        <div className="text-dim font-thin">
           {date.toLocaleTimeString("en-US", {
             hour: "numeric",
             minute: "numeric",
           })}
         </div>
       </time>
-      <div className="text-sm max-sm:ml-4 max-sm:flex max-sm:justify-start max-sm:gap-2 sm:order-3 sm:grow sm:text-right">
+      <div className="text-balance text-left max-sm:ml-4 sm:grow">{name}</div>
+      <div className="font-thin max-sm:ml-4 max-sm:flex max-sm:justify-start max-sm:gap-2 sm:grow sm:text-right">
         <div>{venue}</div>
         <div className="text-dim">{city}</div>
       </div>
