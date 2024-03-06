@@ -5,7 +5,7 @@ type ShowListingProps = Show;
 
 const ShowListing = ({ name, venue, city, date, href }: ShowListingProps) => (
   <li className="flex flex-row items-center max-sm:justify-between sm:gap-8">
-    <div className="flex max-sm:flex-col sm:grow sm:items-baseline sm:justify-between sm:gap-4">
+    <div className="flex drop-shadow-dark max-sm:flex-col sm:grow sm:items-baseline sm:justify-between sm:gap-4">
       <h2 className="text-balance text-left font-semibold sm:order-2 sm:grow">
         {name}
       </h2>
