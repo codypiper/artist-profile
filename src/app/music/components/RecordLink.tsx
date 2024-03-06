@@ -1,10 +1,10 @@
 import ExternalLink from "@/components/ExternalLink";
-import IRecord from "@/types/Record";
+import Record from "@/types/Record";
 import Image from "next/image";
 
-type RecordProps = IRecord;
+type RecordLinkProps = Record;
 
-const Record = ({ title, href, image, type, date }: RecordProps) => (
+const RecordLink = ({ title, href, image, type, date }: RecordLinkProps) => (
   <ExternalLink href={href}>
     <div className="flex w-64 max-w-[35vw] flex-col items-center">
       <Image
@@ -26,4 +26,4 @@ const Record = ({ title, href, image, type, date }: RecordProps) => (
   </ExternalLink>
 );
 
-export default Record;
+export default RecordLink;

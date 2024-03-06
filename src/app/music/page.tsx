@@ -2,7 +2,7 @@ import BackgroundImage from "@/components/BackgroundImage";
 import records from "@/constants/records";
 import crosswalk from "@pub/images/backgrounds/crosswalk.jpg";
 import { Metadata } from "next";
-import Record from "./components/Record";
+import RecordLink from "./components/RecordLink";
 
 export const metadata: Metadata = {
   title: "Music - Cody Piper",
@@ -16,7 +16,7 @@ const Music = () => (
     <ol className="flex flex-wrap justify-center gap-8">
       {records.map((record) => (
         <li key={record.title}>
-          <Record {...record} />
+          <RecordLink {...record} />
         </li>
       ))}
     </ol>
