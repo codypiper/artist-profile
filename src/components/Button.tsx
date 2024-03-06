@@ -2,11 +2,13 @@ import classNames from "classnames";
 
 interface ButtonProps {
   children: React.ReactNode;
+  type?: React.ButtonHTMLAttributes<HTMLButtonElement>["type"];
   noShadow?: boolean;
 }
 
-const Button = ({ children, noShadow }: ButtonProps) => (
+const Button = ({ children, type = "button", noShadow }: ButtonProps) => (
   <button
+    type={type}
     className={classNames(
       "min-w-16",
       "rounded-full",
