@@ -1,9 +1,9 @@
+import Navbar from "@/components/Navbar";
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import "./globals.css";
 
 // Allow Font Awesome CSS to work (see: https://fontawesome.com/v6/docs/web/use-with/react/use-with#getting-font-awesome-css-to-work)
-import Navbar from "@/components/Navbar";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 config.autoAddCss = false;
