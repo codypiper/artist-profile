@@ -4,7 +4,7 @@ import Show from "@/types/Show";
 type ShowListingProps = Show;
 
 const ShowListing = ({ name, venue, city, date, href }: ShowListingProps) => (
-  <li className="flex flex-row items-center max-sm:justify-between sm:gap-8">
+  <li className="border-dim flex flex-row items-center border-b py-4 last:border-b-0 max-sm:justify-between sm:gap-8">
     <div className="flex drop-shadow-dark max-sm:flex-col sm:grow sm:items-baseline sm:justify-between sm:gap-4">
       <h2 className="text-balance text-left font-semibold sm:order-2 sm:grow">
         {name}
@@ -21,7 +21,7 @@ const ShowListing = ({ name, venue, city, date, href }: ShowListingProps) => (
             weekday: "short",
           })}`}
         </div>
-        <div className="text-subtext">
+        <div className="text-dim">
           {date.toLocaleTimeString("en-US", {
             hour: "numeric",
             minute: "numeric",
@@ -30,7 +30,7 @@ const ShowListing = ({ name, venue, city, date, href }: ShowListingProps) => (
       </time>
       <div className="text-sm max-sm:ml-4 max-sm:flex max-sm:justify-start max-sm:gap-2 sm:order-3 sm:grow sm:text-right">
         <div>{venue}</div>
-        <div className="text-subtext">{city}</div>
+        <div className="text-dim">{city}</div>
       </div>
     </div>
     <ButtonLink href={href}>link</ButtonLink>

@@ -8,7 +8,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        subtext: "#a3a3a3",
+        dim: "#a3a3a3",
       },
       dropShadow: {
         glow: "0 0 3px",

@@ -20,12 +20,12 @@ const Shows = () => {
         <p className="italic drop-shadow-dark">new show dates TBD</p>
       ) : (
         <>
-          <ol className="flex w-full max-w-3xl flex-col gap-4">
+          <ol className="flex w-full max-w-3xl flex-col">
             {upcomingShows.map((show) => (
               <ShowListing key={show.name} {...show} />
             ))}
           </ol>
-          <p className="text-subtext mt-12 text-xs italic drop-shadow-dark">
+          <p className="text-dim mt-12 text-xs italic drop-shadow-dark">
             * times are displayed using the local timezone of the venue
           </p>
         </>
