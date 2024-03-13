@@ -23,19 +23,39 @@ const Home = () => (
     </div>
     <ul className="flex flex-row items-center gap-4">
       <li>
-        <IconLink href="https://instagram.com/codycpiper" icon={faInstagram} />
+        <IconLink
+          href="https://instagram.com/codycpiper"
+          icon={faInstagram}
+          label="Instagram"
+        />
       </li>
       <li>
-        <IconLink href="https://tiktok.com/@codycpiper" icon={faTiktok} />
+        <IconLink
+          href="https://tiktok.com/@codycpiper"
+          icon={faTiktok}
+          label="TikTok"
+        />
       </li>
       <li>
-        <IconLink href="https://facebook.com/codypiper" icon={faFacebook} />
+        <IconLink
+          href="https://facebook.com/codypiper"
+          icon={faFacebook}
+          label="Facebook"
+        />
       </li>
       <li>
-        <IconLink href="https://x.com/codypiper" icon={faXTwitter} />
+        <IconLink
+          href="https://x.com/codypiper"
+          icon={faXTwitter}
+          label="Twitter/X"
+        />
       </li>
       <li>
-        <IconLink href="https://youtube.com/@codypiper" icon={faYoutube} />
+        <IconLink
+          href="https://youtube.com/@codypiper"
+          icon={faYoutube}
+          label="YouTube"
+        />
       </li>
     </ul>
     <BackgroundImage alt="Cody Piper sitting on a tree trunk" src={tree} />

@@ -7,6 +7,7 @@ interface LinkProps {
   disabled?: boolean;
   isInternal?: boolean;
   noShadow?: boolean;
+  label?: string;
 }
 
 const Link = ({
@@ -15,6 +16,7 @@ const Link = ({
   disabled = false,
   isInternal = false,
   noShadow = false,
+  label,
 }: LinkProps) => {
   const className = classNames(
     "transition",
@@ -26,7 +28,12 @@ const Link = ({
   );
 
   return isInternal ? (
-    <NextLink href={href} className={className} aria-disabled={disabled}>
+    <NextLink
+      href={href}
+      className={className}
+      aria-disabled={disabled}
+      aria-label={label}
+    >
       {children}
     </NextLink>
   ) : (
@@ -36,6 +43,7 @@ const Link = ({
       rel="noreferrer"
       className={className}
       aria-disabled={disabled}
+      aria-label={label}
     >
       {children}
     </a>
