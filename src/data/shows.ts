@@ -24,6 +24,13 @@ const shows: Show[] = [
   },
   {
     name: "w/ Julia Norah",
+    venue: "The Rialto Living Room",
+    city: "Akron, OH",
+    date: new Date("2024-05-10T17:00"),
+    href: "https://www.bandsintown.com/e/105293760",
+  },
+  {
+    name: "w/ Julia Norah",
     venue: "Jenks1929",
     city: "Akron, OH",
     date: new Date("2024-05-11T16:00"),
