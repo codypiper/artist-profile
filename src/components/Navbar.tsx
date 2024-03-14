@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "@/components/Link";
-import routes from "@/constants/routes";
+import routes from "@/lib/routes";
 import { usePathname } from "next/navigation";
 
 const Navbar = () => {

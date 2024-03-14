@@ -1,5 +1,9 @@
 import Page from "@/enums/Page";
-import Route from "@/types/Route";
+
+interface Route {
+  page: Page;
+  path: string;
+}
 
 const routes: Route[] = [
   {
