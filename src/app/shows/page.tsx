@@ -1,5 +1,5 @@
 import BackgroundImage from "@/components/BackgroundImage";
-import shows from "@/data/shows";
+import database from "@/lib/database";
 import clouds from "@pub/images/backgrounds/clouds.jpg";
 import { Metadata } from "next";
 import ShowListing from "./components/ShowListing";
@@ -8,21 +8,25 @@ export const metadata: Metadata = {
   title: "Shows - Cody Piper",
 };
 
-const Shows = () => {
-  const upcomingShows = shows.filter((show) => show.date > new Date());
+const Shows = async () => {
+  const shows = await database
+    .selectFrom("shows")
+    .selectAll()
+    .where("start_date", ">", new Date())
+    .execute();
 
   return (
     <main className="relative flex min-h-screen flex-col items-center justify-center px-4 py-40">
       <h1 className="mb-12 text-center text-3xl font-bold drop-shadow-dark">
         Shows
       </h1>
-      {upcomingShows.length === 0 ? (
+      {shows.length === 0 ? (
         <p className="italic drop-shadow-dark">new show dates TBD</p>
       ) : (
         <>
           <ol className="flex w-full max-w-3xl flex-col">
-            {upcomingShows.map((show) => (
-              <ShowListing key={show.name} {...show} />
+            {shows.map((show) => (
+              <ShowListing key={show.start_date.toISOString()} {...show} />
             ))}
           </ol>
           <p className="text-dim mt-12 text-xs italic drop-shadow-dark">
