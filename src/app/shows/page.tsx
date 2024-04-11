@@ -13,6 +13,7 @@ const Shows = async () => {
     .selectFrom("shows")
     .selectAll()
     .where("start_date", ">", new Date())
+    .orderBy("start_date", "asc")
     .execute();
 
   return (
@@ -29,7 +30,7 @@ const Shows = async () => {
               <ShowListing key={show.start_date.toISOString()} {...show} />
             ))}
           </ol>
-          <p className="text-dim mt-12 text-xs italic drop-shadow-dark">
+          <p className="mt-12 text-xs italic text-dim drop-shadow-dark">
             * times are displayed using the local timezone of the venue
           </p>
         </>
