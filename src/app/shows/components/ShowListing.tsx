@@ -10,7 +10,7 @@ const ShowListing = ({
   url,
   start_date,
 }: ShowListingProps) => (
-  <li className="border-dim flex flex-row items-center border-b py-4 last:border-b-0 max-sm:justify-between sm:gap-8">
+  <li className="flex flex-row items-center border-b border-dim py-4 last:border-b-0 max-sm:justify-between sm:gap-8">
     <div className="flex drop-shadow-dark max-sm:flex-col sm:grow sm:justify-between sm:gap-4">
       <time
         className="max-sm:flex max-sm:justify-start max-sm:gap-2 sm:shrink-0 sm:basis-28"
@@ -24,7 +24,7 @@ const ShowListing = ({
             weekday: "short",
           })}`}
         </div>
-        <div className="text-dim font-thin">
+        <div className="font-thin text-dim">
           {start_date.toLocaleTimeString("en-US", {
             hour: "numeric",
             minute: "numeric",
@@ -33,7 +33,7 @@ const ShowListing = ({
       </time>
       <div className="text-balance text-left max-sm:ml-4 sm:grow">{name}</div>
       <div className="font-thin max-sm:ml-4 max-sm:flex max-sm:justify-start max-sm:gap-2 sm:grow sm:text-right">
-        <div>{venue}</div>
+        <div className="text-balance">{venue}</div>
         <div className="text-dim">{location}</div>
       </div>
     </div>

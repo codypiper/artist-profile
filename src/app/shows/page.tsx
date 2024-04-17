@@ -25,7 +25,7 @@ const Shows = async () => {
         <p className="italic drop-shadow-dark">new show dates TBD</p>
       ) : (
         <>
-          <ol className="flex w-full max-w-3xl flex-col">
+          <ol className="flex w-full max-w-4xl flex-col">
             {shows.map((show) => (
               <ShowListing key={show.start_date.toISOString()} {...show} />
             ))}
