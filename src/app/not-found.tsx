@@ -1,6 +1,6 @@
 import BackgroundImage from "@/components/BackgroundImage";
 import Link from "@/components/Link";
-import running from "@pub/images/backgrounds/running.jpg";
+import grass from "@pub/images/backgrounds/grass.jpg";
 
 const NotFound = () => (
   <main className="relative flex min-h-screen flex-col items-center justify-center py-40">
@@ -11,10 +11,7 @@ const NotFound = () => (
     <Link href="/" isInternal>
       return home
     </Link>
-    <BackgroundImage
-      src={running}
-      alt="Blurry picture of Cody Piper running in the street at night"
-    />
+    <BackgroundImage alt="Field with tall grass and flowers" src={grass} />
   </main>
 );
 

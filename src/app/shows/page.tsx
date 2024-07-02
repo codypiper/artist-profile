@@ -35,7 +35,7 @@ const Shows = async () => {
           </p>
         </>
       )}
-      <BackgroundImage alt="Clouds from an airplane" src={clouds} />
+      <BackgroundImage alt="Clouds with tree silhouettes" src={clouds} />
     </main>
   );
 };

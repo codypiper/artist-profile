@@ -1,6 +1,6 @@
 import BackgroundImage from "@/components/BackgroundImage";
 import records from "@/data/records";
-import crosswalk from "@pub/images/backgrounds/crosswalk.jpg";
+import silhouette from "@pub/images/backgrounds/silhouette.jpg";
 import { Metadata } from "next";
 import RecordLink from "./components/RecordLink";
 
@@ -21,8 +21,8 @@ const Music = () => (
       ))}
     </ol>
     <BackgroundImage
-      alt="Cody Piper standing in a crosswalk at night"
-      src={crosswalk}
+      alt="Nighttime silhoeutte of Cody Piper in front of some trees"
+      src={silhouette}
     />
   </main>
 );
