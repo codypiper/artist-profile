@@ -13,7 +13,7 @@ const Music = () => (
     <h1 className="mb-10 text-center text-3xl font-bold drop-shadow-dark">
       Music
     </h1>
-    <ol className="flex flex-wrap justify-center gap-8">
+    <ol className="flex max-w-4xl flex-wrap justify-center gap-8">
       {records.map((record) => (
         <li key={record.title}>
           <RecordLink {...record} />
