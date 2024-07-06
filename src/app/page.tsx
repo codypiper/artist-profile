@@ -12,7 +12,7 @@ import IconLink from "./components/IconLink";
 const Home = () => (
   <main className="relative flex min-h-screen flex-col items-center justify-center py-40">
     <h1 className="mb-10 px-4 text-center text-5xl font-bold drop-shadow-dark">
-      NEW SINGLE &quot;HIBERNATING&quot; OUT 7/5
+      NEW SINGLE &quot;HIBERNATING&quot; OUT NOW
     </h1>
     <ul className="flex flex-row items-center gap-4">
       <li>
