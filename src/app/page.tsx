@@ -24,7 +24,7 @@ const Home = () => (
       </li>
       <li>
         <IconLink
-          href="https://tiktok.com/@codycpiper"
+          href="https://tiktok.com/@cody_piper"
           icon={faTiktok}
           label="TikTok"
         />
