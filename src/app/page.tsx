@@ -1,4 +1,5 @@
 import BackgroundImage from "@/components/BackgroundImage";
+import YouTubePlayer from "@/components/YouTubePlayer";
 import {
   faFacebook,
   faInstagram,
@@ -11,9 +12,15 @@ import IconLink from "./components/IconLink";
 
 const Home = () => (
   <main className="relative flex min-h-screen flex-col items-center justify-center py-40">
-    <h1 className="mb-10 px-4 text-center text-5xl font-bold drop-shadow-dark">
-      NEW SINGLE &quot;HIBERNATING&quot; OUT NOW
+    <h1 className="mb-3 px-4 text-center text-3xl font-bold drop-shadow-dark">
+      &quot;Hibernating&quot; video:
     </h1>
+    <div className="mb-16 w-[50rem] max-w-[100vw] shadow-2xl shadow-black">
+      <YouTubePlayer
+        videoId="zsAmb0pB7bU"
+        title="Hibernating (Official Video)"
+      />
+    </div>
     <ul className="flex flex-row items-center gap-4">
       <li>
         <IconLink
