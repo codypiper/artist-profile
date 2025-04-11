@@ -1,4 +1,5 @@
 import BackgroundImage from "@/components/BackgroundImage";
+import Link from "@/components/Link";
 import YouTubePlayer from "@/components/YouTubePlayer";
 import {
   faFacebook,
@@ -8,20 +9,55 @@ import {
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 import candle from "@pub/images/backgrounds/candle.jpg";
+import beQuiet from "@pub/images/records/be-quiet.jpg";
+import Image from "next/image";
 import IconLink from "./components/IconLink";
+import NewsListing from "./components/NewsListing";
 
 const Home = () => (
   <main className="relative flex min-h-screen flex-col items-center justify-center py-40">
-    <h1 className="mb-3 px-4 text-center text-3xl font-bold drop-shadow-dark">
-      &quot;Season&apos;s End&quot; video:
+    <h1 className="mb-10 text-center text-4xl font-bold drop-shadow-dark">
+      NEWS
     </h1>
-    <div className="mb-16 w-[50rem] max-w-[100vw] shadow-2xl shadow-black">
-      <YouTubePlayer
-        videoId="NH5x4iHRTLs"
-        title="Season's End (Official Video)"
+    <ol className="flex w-full max-w-4xl flex-col">
+      <NewsListing
+        heading={`new single "Be Quiet" OUT NOW!`}
+        content={
+          <>
+            <Link href="https://music.codypipermedia.com/be-quiet">
+              <div>
+                <Image
+                  className="w-full max-w-64"
+                  src={beQuiet}
+                  alt={"Be Quiet cover artwork"}
+                  priority
+                  height={250}
+                  width={250}
+                />
+                <p className="mt-1 text-center text-xs text-dim drop-shadow-dark">
+                  click to listen
+                </p>
+              </div>
+            </Link>
+            <p className="text-center drop-shadow-dark">
+              music video available WEDNESDAY 4/16
+            </p>
+          </>
+        }
       />
-    </div>
-    <ul className="flex flex-row items-center gap-4">
+      <NewsListing
+        heading={`"Things May Change" music video:`}
+        content={
+          <div className="mb-2 w-[50rem] max-w-[100vw] shadow-2xl shadow-black">
+            <YouTubePlayer
+              videoId="NCkYqz7KZSA"
+              title="Things May Change (Official Video)"
+            />
+          </div>
+        }
+      />
+    </ol>
+    <ul className="mt-10 flex flex-row items-center gap-4">
       <li>
         <IconLink
           href="https://instagram.com/codycpiper"
