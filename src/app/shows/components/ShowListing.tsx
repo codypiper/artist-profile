@@ -10,7 +10,7 @@ const ShowListing = ({
   url,
   start_date,
 }: ShowListingProps) => (
-  <li className="border-opacity-dim flex flex-row items-center border-b py-4 last:border-b-0 max-sm:justify-between sm:gap-8">
+  <li className="border-white/dim flex flex-row items-center border-b py-4 last:border-b-0 max-sm:justify-between sm:gap-8">
     <div className="flex drop-shadow-dark max-sm:flex-col sm:grow sm:justify-between sm:gap-4">
       <time
         className="max-sm:flex max-sm:justify-start max-sm:gap-2 sm:shrink-0 sm:basis-28"
