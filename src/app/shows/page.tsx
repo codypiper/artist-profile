@@ -19,7 +19,7 @@ const Shows = async () => {
   return (
     <main className="relative flex min-h-screen flex-col items-center justify-center px-4 py-40">
       <h1 className="mb-12 text-center text-3xl font-bold drop-shadow-dark">
-        Shows
+        SHOWS
       </h1>
       {shows.length === 0 ? (
         <p className="italic drop-shadow-dark">new show dates TBD</p>
