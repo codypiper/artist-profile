@@ -1,5 +1,6 @@
 import RecordType from "@/enums/RecordType";
 import Record from "@/types/Record";
+import beQuiet from "@pub/images/records/be-quiet.jpg";
 import bygones from "@pub/images/records/bygones.jpg";
 import hibernating from "@pub/images/records/hibernating.jpg";
 import iRemember from "@pub/images/records/i-remember.jpg";
@@ -9,6 +10,13 @@ import thingsMayChange from "@pub/images/records/things-may-change.jpg";
 import thinkingOfYou from "@pub/images/records/thinking-of-you.jpg";
 
 const records: Record[] = [
+  {
+    title: "Be Quiet",
+    image: beQuiet,
+    type: RecordType.SINGLE,
+    date: new Date("2025-04-11"),
+    href: "https://music.codypipermedia.com/be-quiet",
+  },
   {
     title: "Season's End",
     image: seasonsEnd,
