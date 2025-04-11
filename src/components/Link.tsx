@@ -23,7 +23,7 @@ const Link = ({
     "duration-200",
     { "drop-shadow-dark": !noShadow },
     { "hover:drop-shadow-glow": !(noShadow || disabled) },
-    { "opacity-70": disabled },
+    { "opacity-dim": disabled },
     { "pointer-events-none": disabled },
   );
 

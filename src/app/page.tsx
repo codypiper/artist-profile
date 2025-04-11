@@ -34,7 +34,7 @@ const Home = () => (
                   height={250}
                   width={250}
                 />
-                <p className="mt-1 text-center text-xs text-dim drop-shadow-dark">
+                <p className="opacity-dim mt-1 text-center text-xs drop-shadow-dark">
                   click to listen
                 </p>
               </div>

@@ -30,7 +30,7 @@ const Shows = async () => {
               <ShowListing key={show.start_date.toISOString()} {...show} />
             ))}
           </ol>
-          <p className="mt-12 text-xs italic text-dim drop-shadow-dark">
+          <p className="opacity-dim mt-12 text-xs italic drop-shadow-dark">
             * times are displayed using the local timezone of the venue
           </p>
         </>

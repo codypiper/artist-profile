@@ -7,12 +7,12 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      colors: {
-        dim: "#a3a3a3",
-      },
       dropShadow: {
         glow: "0 0 3px",
         dark: "0 0 6px rgb(0 0 0)",
+      },
+      opacity: {
+        dim: "0.5",
       },
     },
   },
