@@ -39,14 +39,14 @@ const Home = () => (
                 </p>
               </div>
             </Link>
-            <p className="text-center drop-shadow-dark">
+            <p className="text-center italic drop-shadow-dark">
               music video available WEDNESDAY 4/16
             </p>
           </>
         }
       />
       <NewsListing
-        heading={`"Things May Change" music video:`}
+        heading={`"Things May Change" music video`}
         content={
           <div className="mb-2 w-[50rem] max-w-[100vw] shadow-2xl shadow-black">
             <YouTubePlayer
