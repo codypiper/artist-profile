@@ -1,5 +1,4 @@
 import BackgroundImage from "@/components/BackgroundImage";
-import Link from "@/components/Link";
 import YouTubePlayer from "@/components/YouTubePlayer";
 import {
   faFacebook,
@@ -9,8 +8,6 @@ import {
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 import candle from "@pub/images/backgrounds/candle.jpg";
-import beQuiet from "@pub/images/records/be-quiet.jpg";
-import Image from "next/image";
 import IconLink from "./components/IconLink";
 import NewsListing from "./components/NewsListing";
 
@@ -21,28 +18,14 @@ const Home = () => (
     </h1>
     <ol className="flex w-full max-w-4xl flex-col">
       <NewsListing
-        heading={`new single "Be Quiet" OUT NOW!`}
+        heading={`"Be Quiet" music video out now!`}
         content={
-          <>
-            <Link href="https://music.codypipermedia.com/be-quiet">
-              <div>
-                <Image
-                  className="w-full max-w-64"
-                  src={beQuiet}
-                  alt={"Be Quiet cover artwork"}
-                  priority
-                  height={250}
-                  width={250}
-                />
-                <p className="opacity-dim mt-1 text-center text-xs drop-shadow-dark">
-                  click to listen
-                </p>
-              </div>
-            </Link>
-            <p className="text-center italic drop-shadow-dark">
-              music video available WEDNESDAY 4/16
-            </p>
-          </>
+          <div className="mb-2 w-[50rem] max-w-[100vw] shadow-2xl shadow-black">
+            <YouTubePlayer
+              videoId="DcRw1sY3QUA"
+              title="Be Quiet (Official Video)"
+            />
+          </div>
         }
       />
       <NewsListing
