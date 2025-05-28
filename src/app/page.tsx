@@ -3,8 +3,9 @@ import YouTubePlayer from "@/components/YouTubePlayer";
 import {
   faFacebook,
   faInstagram,
+  faSpotify,
+  faThreads,
   faTiktok,
-  faXTwitter,
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 import candle from "@pub/images/backgrounds/candle.jpg";
@@ -43,6 +44,13 @@ const Home = () => (
     <ul className="mt-10 flex flex-row items-center gap-4">
       <li>
         <IconLink
+          href="https://open.spotify.com/artist/4ajrDORPXqqfy4Ce8NHSoO"
+          icon={faSpotify}
+          label="Spotify"
+        />
+      </li>
+      <li>
+        <IconLink
           href="https://instagram.com/codycpiper"
           icon={faInstagram}
           label="Instagram"
@@ -57,6 +65,13 @@ const Home = () => (
       </li>
       <li>
         <IconLink
+          href="https://youtube.com/@codypiper"
+          icon={faYoutube}
+          label="YouTube"
+        />
+      </li>
+      <li>
+        <IconLink
           href="https://facebook.com/codypiper"
           icon={faFacebook}
           label="Facebook"
@@ -64,16 +79,9 @@ const Home = () => (
       </li>
       <li>
         <IconLink
-          href="https://x.com/codypiper"
-          icon={faXTwitter}
-          label="Twitter/X"
-        />
-      </li>
-      <li>
-        <IconLink
-          href="https://youtube.com/@codypiper"
-          icon={faYoutube}
-          label="YouTube"
+          href="https://threads.com/@codycpiper"
+          icon={faThreads}
+          label="Threads"
         />
       </li>
     </ul>
