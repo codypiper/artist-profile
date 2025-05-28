@@ -21,7 +21,7 @@ const Home = () => (
       <NewsListing
         heading={`"Be Quiet" music video out now!`}
         content={
-          <div className="mb-2 w-[50rem] max-w-[100vw] shadow-2xl shadow-black">
+          <div className="mb-2 w-200 max-w-screen shadow-2xl shadow-black">
             <YouTubePlayer
               videoId="DcRw1sY3QUA"
               title="Be Quiet (Official Video)"
@@ -32,7 +32,7 @@ const Home = () => (
       <NewsListing
         heading={`"Things May Change" music video`}
         content={
-          <div className="mb-2 w-[50rem] max-w-[100vw] shadow-2xl shadow-black">
+          <div className="mb-2 w-200 max-w-screen shadow-2xl shadow-black">
             <YouTubePlayer
               videoId="NCkYqz7KZSA"
               title="Things May Change (Official Video)"

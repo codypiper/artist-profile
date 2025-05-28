@@ -19,6 +19,7 @@ const Link = ({
   label,
 }: LinkProps) => {
   const className = classNames(
+    "cursor-pointer",
     "transition",
     "duration-200",
     { "drop-shadow-dark": !noShadow },

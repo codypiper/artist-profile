@@ -19,6 +19,7 @@ const Button = ({
       "border",
       "border-white",
       "p-2",
+      "cursor-pointer",
       "transition",
       "duration-200",
       { "drop-shadow-dark": !noShadow },
