@@ -1,17 +1,25 @@
 "use client";
 
 import Link from "@/components/Link";
+import { useBreakpoint } from "@/hooks/useBreakpoint";
 import routes from "@/lib/routes";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Hamburger from "./Hamburger";
 
 const NavHeader = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const isFullNav = useBreakpoint("sm");
   const pathname = usePathname();
 
   const toggleNav = () => setIsOpen(!isOpen);
   const closeNav = () => setIsOpen(false);
+
+  useEffect(() => {
+    if (isFullNav) {
+      closeNav();
+    }
+  }, [isFullNav]);
 
   return (
     <>
