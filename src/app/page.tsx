@@ -14,7 +14,7 @@ import NewsListing from "./components/NewsListing";
 
 const Home = () => (
   <main className="relative flex min-h-screen flex-col items-center justify-center py-40">
-    <h1 className="mb-10 text-center text-4xl font-bold drop-shadow-dark">
+    <h1 className="drop-shadow-dark mb-10 text-center text-4xl font-bold">
       NEWS
     </h1>
     <ol className="flex w-full max-w-4xl flex-col">
@@ -30,12 +30,12 @@ const Home = () => (
         }
       />
       <NewsListing
-        heading={`"Things May Change" music video`}
+        heading={`Live solo performance of "Be Quiet" — recorded in Nashville`}
         content={
           <div className="mb-2 w-200 max-w-screen shadow-2xl shadow-black">
             <YouTubePlayer
-              videoId="NCkYqz7KZSA"
-              title="Things May Change (Official Video)"
+              videoId="todbEDa2X3s"
+              title="Be Quiet (Live Solo Performance)"
             />
           </div>
         }
