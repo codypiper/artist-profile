@@ -1,5 +1,6 @@
 import classNames from "classnames";
 import NextLink from "next/link";
+import { MouseEventHandler } from "react";
 
 interface LinkProps {
   href: string;
@@ -7,6 +8,7 @@ interface LinkProps {
   disabled?: boolean;
   isInternal?: boolean;
   noShadow?: boolean;
+  onClick?: MouseEventHandler<HTMLAnchorElement>;
   label?: string;
 }
 
@@ -16,6 +18,7 @@ const Link = ({
   disabled = false,
   isInternal = false,
   noShadow = false,
+  onClick,
   label,
 }: LinkProps) => {
   const className = classNames(
@@ -34,6 +37,7 @@ const Link = ({
       className={className}
       aria-disabled={disabled}
       aria-label={label}
+      onClick={onClick}
     >
       {children}
     </NextLink>

@@ -60,10 +60,11 @@ const NavHeader = () => {
         >
           <ul className="flex flex-col items-center justify-center gap-6 py-4 text-2xl">
             {routes.map((route) => (
-              <li key={route.page} onClick={closeNav}>
+              <li key={route.page}>
                 <Link
                   href={route.path}
                   disabled={pathname === route.path}
+                  onClick={closeNav}
                   isInternal
                 >
                   {route.page}
