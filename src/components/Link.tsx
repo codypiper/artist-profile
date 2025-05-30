@@ -25,7 +25,7 @@ const Link = ({
       href={href}
       className={`cursor-pointer transition duration-200 ${
         disabled ? "opacity-dim pointer-events-none" : ""
-      }${noShadow ? "" : "drop-shadow-dark"}${
+      } ${noShadow ? "" : "drop-shadow-dark"} ${
         noShadow || disabled ? "" : "hover:drop-shadow-glow"
       }`}
       aria-disabled={disabled}
@@ -41,7 +41,7 @@ const Link = ({
       rel="noreferrer"
       className={`cursor-pointer transition duration-200 ${
         disabled ? "opacity-dim pointer-events-none" : ""
-      }${noShadow ? "" : "drop-shadow-dark"}${
+      } ${noShadow ? "" : "drop-shadow-dark"} ${
         noShadow || disabled ? "" : "hover:drop-shadow-glow"
       }`}
       aria-disabled={disabled}
