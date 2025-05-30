@@ -55,7 +55,7 @@ const NavHeader = () => {
         {/* Hamburger nav dropdown */}
         <nav
           className={`overflow-hidden transition-all duration-500 ease-in-out sm:hidden ${
-            isOpen ? "opacity-100" : "max-h-0 opacity-0"
+            isOpen ? "max-h-64 opacity-100" : "max-h-0 opacity-0"
           }`}
         >
           <ul className="flex flex-col items-center justify-center gap-6 py-4 text-2xl">
