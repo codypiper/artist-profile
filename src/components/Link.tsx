@@ -1,4 +1,3 @@
-import classNames from "classnames";
 import NextLink from "next/link";
 import { MouseEventHandler } from "react";
 
@@ -21,20 +20,14 @@ const Link = ({
   onClick,
   label,
 }: LinkProps) => {
-  const className = classNames(
-    "cursor-pointer",
-    "transition",
-    "duration-200",
-    { "drop-shadow-dark": !noShadow },
-    { "hover:drop-shadow-glow": !(noShadow || disabled) },
-    { "opacity-dim": disabled },
-    { "pointer-events-none": disabled },
-  );
-
   return isInternal ? (
     <NextLink
       href={href}
-      className={className}
+      className={`cursor-pointer transition duration-200 ${
+        disabled ? "opacity-dim pointer-events-none" : ""
+      }${noShadow ? "" : "drop-shadow-dark"}${
+        noShadow || disabled ? "" : "hover:drop-shadow-glow"
+      }`}
       aria-disabled={disabled}
       aria-label={label}
       onClick={onClick}
@@ -46,7 +39,11 @@ const Link = ({
       href={href}
       target="_blank"
       rel="noreferrer"
-      className={className}
+      className={`cursor-pointer transition duration-200 ${
+        disabled ? "opacity-dim pointer-events-none" : ""
+      }${noShadow ? "" : "drop-shadow-dark"}${
+        noShadow || disabled ? "" : "hover:drop-shadow-glow"
+      }`}
       aria-disabled={disabled}
       aria-label={label}
     >

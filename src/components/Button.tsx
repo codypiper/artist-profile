@@ -1,5 +1,3 @@
-import classNames from "classnames";
-
 interface ButtonProps {
   children: React.ReactNode;
   type?: React.ButtonHTMLAttributes<HTMLButtonElement>["type"];
@@ -13,18 +11,9 @@ const Button = ({
 }: ButtonProps) => (
   <button
     type={type}
-    className={classNames(
-      "min-w-16",
-      "rounded-full",
-      "border",
-      "border-white",
-      "p-2",
-      "cursor-pointer",
-      "transition",
-      "duration-200",
-      { "drop-shadow-dark": !noShadow },
-      { "hover:drop-shadow-glow": !noShadow },
-    )}
+    className={`min-w-16 cursor-pointer rounded-full border border-white p-2 transition duration-200 ${
+      noShadow ? "" : "drop-shadow-dark hover:drop-shadow-glow"
+    }`}
   >
     {children}
   </button>

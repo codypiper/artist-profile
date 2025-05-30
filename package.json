@@ -13,7 +13,6 @@
     "@fortawesome/free-brands-svg-icons": "^6.7.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@vercel/postgres-kysely": "^0.10.0",
-    "classnames": "^2.5.1",
     "kysely": "^0.27.5",
     "next": "^15.1.2",
     "react": "^19.0.0",
