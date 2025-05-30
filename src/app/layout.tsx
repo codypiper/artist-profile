@@ -1,4 +1,4 @@
-import Navbar from "@/components/Navbar";
+import NavHeader from "@/components/NavHeader";
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import "./globals.css";
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 const RootLayout = ({ children }: { children: React.ReactNode }) => (
   <html lang="en">
     <body className={`bg-black text-white ${manrope.className}`}>
-      <Navbar />
+      <NavHeader />
       {children}
     </body>
   </html>
