@@ -15,6 +15,10 @@ const routes: Route[] = [
     path: "/music",
   },
   {
+    page: Page.PHOTOS,
+    path: "/photos",
+  },
+  {
     page: Page.SHOWS,
     path: "/shows",
   },
