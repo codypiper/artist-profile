@@ -3,6 +3,7 @@ import LightboxComponent, {
   LightboxExternalProps,
   RenderSlideProps,
 } from "yet-another-react-lightbox";
+import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import "yet-another-react-lightbox/styles.css";
 
 const renderSlide = ({ slide, rect }: RenderSlideProps) => (
@@ -20,7 +21,11 @@ const renderSlide = ({ slide, rect }: RenderSlideProps) => (
 );
 
 const Lightbox = (props: LightboxExternalProps) => (
-  <LightboxComponent render={{ slide: renderSlide }} {...props} />
+  <LightboxComponent
+    render={{ slide: renderSlide }}
+    plugins={[Zoom]}
+    {...props}
+  />
 );
 
 export default Lightbox;
