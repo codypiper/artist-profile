@@ -1,6 +1,7 @@
 "use client";
 
 import photos from "@/data/photos";
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import { useState } from "react";
 import {
@@ -9,8 +10,8 @@ import {
   RowsPhotoAlbum,
 } from "react-photo-album";
 import "react-photo-album/rows.css";
-import Lightbox from "yet-another-react-lightbox";
-import "yet-another-react-lightbox/styles.css";
+
+const Lightbox = dynamic(() => import("@/components/Lightbox"));
 
 const renderImage = (
   { alt = "", title, sizes }: RenderImageProps,
@@ -32,7 +33,7 @@ const renderImage = (
 );
 
 const PhotoGallery = () => {
-  const [index, setIndex] = useState(-1);
+  const [index, setIndex] = useState<number | null>(null);
 
   return (
     <>
@@ -41,12 +42,14 @@ const PhotoGallery = () => {
         render={{ image: renderImage }}
         onClick={({ index: current }) => setIndex(current)}
       />
-      <Lightbox
-        index={index}
-        slides={photos}
-        open={index >= 0}
-        close={() => setIndex(-1)}
-      />
+      {index != null && (
+        <Lightbox
+          open
+          index={index}
+          slides={photos}
+          close={() => setIndex(null)}
+        />
+      )}
     </>
   );
 };
