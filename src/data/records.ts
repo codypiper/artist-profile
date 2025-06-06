@@ -5,11 +5,19 @@ import bygones from "@pub/images/records/bygones.jpg";
 import hibernating from "@pub/images/records/hibernating.jpg";
 import iRemember from "@pub/images/records/i-remember.jpg";
 import itsOnlyYou from "@pub/images/records/its-only-you.jpg";
+import odeToALostLove from "@pub/images/records/ode-to-a-lost-love.jpg";
 import seasonsEnd from "@pub/images/records/seasons-end.jpg";
 import thingsMayChange from "@pub/images/records/things-may-change.jpg";
 import thinkingOfYou from "@pub/images/records/thinking-of-you.jpg";
 
 const records: Record[] = [
+  {
+    title: "Ode to a Lost Love",
+    image: odeToALostLove,
+    type: RecordType.SINGLE,
+    date: new Date("2025-06-06"),
+    href: "https://music.codypipermedia.com/ode-to-a-lost-love",
+  },
   {
     title: "Be Quiet",
     image: beQuiet,

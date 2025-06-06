@@ -1,4 +1,5 @@
 import BackgroundImage from "@/components/BackgroundImage";
+import Link from "@/components/Link";
 import YouTubePlayer from "@/components/YouTubePlayer";
 import {
   faFacebook,
@@ -9,6 +10,8 @@ import {
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 import candle from "@pub/images/backgrounds/candle.jpg";
+import odeToALostLove from "@pub/images/records/ode-to-a-lost-love.jpg";
+import Image from "next/image";
 import IconLink from "./components/IconLink";
 import NewsListing from "./components/NewsListing";
 
@@ -18,28 +21,37 @@ const Home = () => (
       NEWS
     </h1>
     <ol className="flex w-full max-w-4xl flex-col">
-      <NewsListing
-        heading={`"Be Quiet" music video out now!`}
-        content={
-          <div className="mb-2 w-200 max-w-screen shadow-2xl shadow-black">
-            <YouTubePlayer
-              videoId="DcRw1sY3QUA"
-              title="Be Quiet (Official Video)"
-            />
-          </div>
-        }
-      />
-      <NewsListing
-        heading={`Live solo performance of "Be Quiet" — recorded in Nashville`}
-        content={
-          <div className="mb-2 w-200 max-w-screen shadow-2xl shadow-black">
-            <YouTubePlayer
-              videoId="todbEDa2X3s"
-              title="Be Quiet (Live Solo Performance)"
-            />
-          </div>
-        }
-      />
+      <NewsListing heading={`NEW SINGLE OUT NOW — "Ode to a Lost Love"`}>
+        <Link href="https://music.codypipermedia.com/ode-to-a-lost-love">
+          <Image
+            className="w-full max-w-64"
+            src={odeToALostLove}
+            alt={`"Ode to a Lost Love" artwork`}
+            priority
+            height={250}
+            width={250}
+          />
+          <p className="opacity-dim drop-shadow-dark mt-1 text-center text-xs">
+            click to listen
+          </p>
+        </Link>
+      </NewsListing>
+      <NewsListing heading={`"Be Quiet" music video:`}>
+        <div className="mb-2 w-200 max-w-screen shadow-2xl shadow-black">
+          <YouTubePlayer
+            videoId="DcRw1sY3QUA"
+            title="Be Quiet (Official Video)"
+          />
+        </div>
+      </NewsListing>
+      <NewsListing heading={`"Be Quiet" recorded live in Nashville:`}>
+        <div className="mb-2 w-200 max-w-screen shadow-2xl shadow-black">
+          <YouTubePlayer
+            videoId="todbEDa2X3s"
+            title="Be Quiet (Live Solo Performance)"
+          />
+        </div>
+      </NewsListing>
     </ol>
     <ul className="mt-10 flex flex-row items-center gap-4">
       <li>
