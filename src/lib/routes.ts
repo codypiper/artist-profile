@@ -1,25 +1,23 @@
-import Page from "@/enums/Page";
-
 interface Route {
-  page: Page;
+  name: string;
   path: string;
 }
 
 const routes: Route[] = [
   {
-    page: Page.HOME,
+    name: "home",
     path: "/",
   },
   {
-    page: Page.MUSIC,
+    name: "music",
     path: "/music",
   },
   {
-    page: Page.PHOTOS,
+    name: "photos",
     path: "/photos",
   },
   {
-    page: Page.SHOWS,
+    name: "shows",
     path: "/shows",
   },
 ];

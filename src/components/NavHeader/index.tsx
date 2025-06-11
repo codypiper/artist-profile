@@ -29,13 +29,13 @@ const NavHeader = () => {
           <nav className="hidden sm:flex">
             <ul className="flex items-center justify-center gap-8">
               {routes.map((route) => (
-                <li key={route.page}>
+                <li key={route.name}>
                   <Link
                     href={route.path}
                     disabled={pathname === route.path}
                     isInternal
                   >
-                    {route.page}
+                    {route.name}
                   </Link>
                 </li>
               ))}
@@ -60,14 +60,14 @@ const NavHeader = () => {
         >
           <ul className="flex flex-col items-center justify-center gap-6 py-4 text-2xl">
             {routes.map((route) => (
-              <li key={route.page}>
+              <li key={route.name}>
                 <Link
                   href={route.path}
                   disabled={pathname === route.path}
                   onClick={closeNav}
                   isInternal
                 >
-                  {route.page}
+                  {route.name}
                 </Link>
               </li>
             ))}
