@@ -1,7 +1,7 @@
 import BackgroundImage from "@/components/BackgroundImage";
 import database from "@/lib/database";
 import clouds from "@pub/images/backgrounds/clouds.jpg";
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import ShowListing from "./components/ShowListing";
 
 export const metadata: Metadata = {

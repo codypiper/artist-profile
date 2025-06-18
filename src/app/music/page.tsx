@@ -1,7 +1,7 @@
 import BackgroundImage from "@/components/BackgroundImage";
 import database from "@/lib/database";
 import silhouette from "@pub/images/backgrounds/silhouette.jpg";
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import RecordLink from "./components/RecordLink";
 
 export const metadata: Metadata = {

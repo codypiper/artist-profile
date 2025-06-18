@@ -1,6 +1,6 @@
 import BackgroundImage from "@/components/BackgroundImage";
 import moonlight from "@pub/images/backgrounds/moonlight.jpg";
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import PhotoGallery from "./components/PhotoGallery";
 
 export const metadata: Metadata = {

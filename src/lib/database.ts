@@ -4,6 +4,7 @@ import { Selectable } from "kysely";
 interface Database {
   records: RecordsTable;
   shows: ShowsTable;
+  videos: VideosTable;
 }
 
 type RecordType = "single" | "ep" | "album";
@@ -24,7 +25,14 @@ interface ShowsTable {
   url: string;
 }
 
+interface VideosTable {
+  id: string;
+  title: string;
+  rank: number;
+}
+
 export type Record = Selectable<RecordsTable>;
 export type Show = Selectable<ShowsTable>;
+export type Video = Selectable<VideosTable>;
 
 export default createKysely<Database>();

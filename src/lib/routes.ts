@@ -13,6 +13,10 @@ const routes: Route[] = [
     path: "/music",
   },
   {
+    name: "videos",
+    path: "/videos",
+  },
+  {
     name: "photos",
     path: "/photos",
   },
