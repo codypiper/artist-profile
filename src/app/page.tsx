@@ -15,7 +15,7 @@ import EmailListForm from "./components/EmailListForm";
 import IconLink from "./components/IconLink";
 
 const Home = () => (
-  <main className="relative flex flex-col items-center justify-center px-4 py-40">
+  <main className="relative flex min-h-screen flex-col items-center justify-center px-4 py-40">
     <h1 className="drop-shadow-dark mb-10 text-center text-4xl font-bold text-balance">
       {'"ODE TO A LOST LOVE" OUT NOW'}
     </h1>
