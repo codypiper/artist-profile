@@ -5,7 +5,7 @@ import type {
   RegisterOptions,
   UseFormRegister,
 } from "react-hook-form";
-import FieldErrorComponent from "./FieldError";
+import ValidationError from "./ValidationError";
 
 type InputProps<T extends FieldValues> = {
   name: Path<T>;
@@ -29,7 +29,7 @@ const Input = <T extends FieldValues>({
   const isError = errors != null;
 
   return (
-    <div className="flex flex-col items-center gap-1">
+    <div className="flex flex-col items-center">
       <input
         aria-label={label}
         aria-invalid={isError}
@@ -40,7 +40,9 @@ const Input = <T extends FieldValues>({
           isError ? "border-error" : "border-white"
         }`}
       />
-      {errors != null && <FieldErrorComponent message={errors.message!} />}
+      <div className="flex h-4.5 flex-col items-center justify-end">
+        {isError && <ValidationError message={errors.message!} />}
+      </div>
     </div>
   );
 };

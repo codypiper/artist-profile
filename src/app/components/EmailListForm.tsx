@@ -5,7 +5,11 @@ import FormResponse from "@/components/form/FormResponse";
 import Input from "@/components/form/Input";
 import type EmailListFormInput from "@/types/form/EmailListFormInput";
 import { useState } from "react";
-import { type SubmitHandler, useForm } from "react-hook-form";
+import {
+  type SubmitErrorHandler,
+  type SubmitHandler,
+  useForm,
+} from "react-hook-form";
 
 type FormState = "success" | "error" | "none";
 
@@ -19,7 +23,7 @@ const EmailListForm = () => {
 
   const [formState, setFormState] = useState<FormState>("none");
 
-  const onSubmit: SubmitHandler<EmailListFormInput> = async (data) => {
+  const onValidSubmit: SubmitHandler<EmailListFormInput> = async (data) => {
     setFormState("none");
 
     try {
@@ -42,14 +46,18 @@ const EmailListForm = () => {
     }
   };
 
+  const onInvalidSubmit: SubmitErrorHandler<EmailListFormInput> = () => {
+    setFormState("none");
+  };
+
   return (
-    <div className="border-white/dim flex flex-col items-center border-y pt-10">
-      <h1 className="mb-4 text-center text-xl font-semibold">
+    <div className="border-white/dim flex flex-col items-center border-y pt-10 pb-12 sm:pb-7.5">
+      <h1 className="mb-6 text-center text-xl font-semibold">
         join my email list 🙂
       </h1>
       <form
-        className="flex flex-wrap items-start justify-center gap-4"
-        onSubmit={handleSubmit(onSubmit)}
+        className="flex justify-center max-sm:flex-col max-sm:items-center max-sm:gap-1 sm:gap-4"
+        onSubmit={handleSubmit(onValidSubmit, onInvalidSubmit)}
       >
         <Input
           name="email"
@@ -73,7 +81,7 @@ const EmailListForm = () => {
           sign up
         </Button>
       </form>
-      <div className="mt-1 h-11">
+      <div className="-mt-4 h-4">
         {formState === "success" && (
           <FormResponse type="success" message="thank you for subscribing!" />
         )}

@@ -6,7 +6,7 @@ interface FormResponseProps {
 const FormResponse = ({ type, message }: FormResponseProps) => (
   <span
     role={type === "success" ? "status" : "alert"}
-    className={`${type === "success" ? "text-success" : "text-error"}`}
+    className={`font-semibold italic ${type === "success" ? "text-success" : "text-error"}`}
   >
     {message}
   </span>
