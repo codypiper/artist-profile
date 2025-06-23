@@ -81,7 +81,7 @@ const EmailListForm = () => {
           sign up
         </Button>
       </form>
-      <div className="-mt-4 h-4">
+      <div className="mt-1 h-0 sm:-mt-3 sm:h-4">
         {formState === "success" && (
           <FormResponse type="success" message="thank you for subscribing!" />
         )}
