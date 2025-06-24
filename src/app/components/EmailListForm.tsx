@@ -4,6 +4,7 @@ import Button from "@/components/Button";
 import FormResponse from "@/components/form/FormResponse";
 import Input from "@/components/form/Input";
 import type EmailListFormInput from "@/types/form/EmailListFormInput";
+import { useSearchParams } from "next/navigation";
 import { useState } from "react";
 import {
   type SubmitErrorHandler,
@@ -11,9 +12,12 @@ import {
   useForm,
 } from "react-hook-form";
 
-type FormState = "success" | "error" | "none";
+type FormState = "success" | "confirm" | "error" | "none";
 
 const EmailListForm = () => {
+  const searchParams = useSearchParams();
+  const isSubscribed = Boolean(searchParams.get("subscribed"));
+
   const {
     register,
     handleSubmit,
@@ -21,7 +25,8 @@ const EmailListForm = () => {
     reset,
   } = useForm<EmailListFormInput>();
 
-  const [formState, setFormState] = useState<FormState>("none");
+  const initialFormState = isSubscribed ? "success" : "none";
+  const [formState, setFormState] = useState<FormState>(initialFormState);
 
   const onValidSubmit: SubmitHandler<EmailListFormInput> = async (data) => {
     setFormState("none");
@@ -39,7 +44,7 @@ const EmailListForm = () => {
         throw new Error(result.error || "Something went wrong.");
       }
 
-      setFormState("success");
+      setFormState("confirm");
       reset();
     } catch {
       setFormState("error");
@@ -51,7 +56,7 @@ const EmailListForm = () => {
   };
 
   return (
-    <div className="border-white/dim flex flex-col items-center border-y pt-10 pb-12 sm:pb-7.5">
+    <div className="border-white/dim flex flex-col items-center border-y pt-14 pb-16 sm:pb-11.5">
       <h1 className="mb-6 text-center text-xl font-semibold">
         join my email list 🙂
       </h1>
@@ -84,6 +89,9 @@ const EmailListForm = () => {
       <div className="mt-1 h-0 sm:-mt-3 sm:h-4">
         {formState === "success" && (
           <FormResponse type="success" message="thank you for subscribing!" />
+        )}
+        {formState === "confirm" && (
+          <FormResponse type="success" message="confirmation email sent" />
         )}
         {formState === "error" && (
           <FormResponse

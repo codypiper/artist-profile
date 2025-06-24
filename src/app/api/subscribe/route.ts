@@ -1,11 +1,12 @@
 import type EmailListFormInput from "@/types/form/EmailListFormInput";
+import { addSubscriberToForm, createSubscriber } from "@/utils/kitApi";
 import { type NextRequest, NextResponse } from "next/server";
 
 /**
- * Handles email subscription by making a call to Kit's v4 Create a Subscriber
- * endpoint.
+ * Handles email subscription by creating a subscriber and then sending a confirmation
+ * email to the subscriber. If either Kit API call fails, then the resulting HTTP
+ * response reflects that.
  *
- * @see {@link https://developers.kit.com/api-reference/subscribers/create-a-subscriber}
  * @param req - The request body.
  * @returns - The HTTP response.
  */
@@ -17,23 +18,20 @@ export const POST = async (req: NextRequest) => {
   }
 
   try {
-    // Call Kit's v4 create a subscriber endpoint
-    const response = await fetch("https://api.kit.com/v4/subscribers", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "X-Kit-Api-Key": process.env.KIT_API_KEY!,
-      },
-      body: JSON.stringify({
-        email_address: email,
-      }),
-    });
-
-    const data = await response.json();
-
+    let response = await createSubscriber(email);
+    let data = await response.json();
     if (!response.ok) {
       return NextResponse.json(
         { error: data?.message || "Failed to subscribe" },
+        { status: response.status },
+      );
+    }
+
+    response = await addSubscriberToForm(email);
+    data = await response.json();
+    if (!response.ok) {
+      return NextResponse.json(
+        { error: data?.message || "Failed to add subscriber to form" },
         { status: response.status },
       );
     }

@@ -19,7 +19,7 @@ const Home = () => (
     <h1 className="drop-shadow-dark mb-10 text-center text-4xl font-bold text-balance">
       {'"ODE TO A LOST LOVE" OUT NOW'}
     </h1>
-    <div className="mb-10 max-w-9/10">
+    <div className="mb-14 max-w-9/10">
       <Link href="https://music.codypipermedia.com/ode-to-a-lost-love">
         <Image
           className="w-full"
@@ -35,7 +35,7 @@ const Home = () => (
       </Link>
     </div>
     <EmailListForm />
-    <ul className="mt-10 flex flex-row items-center gap-4">
+    <ul className="mt-14 flex flex-row items-center gap-4">
       <li>
         <IconLink
           href="https://open.spotify.com/artist/4ajrDORPXqqfy4Ce8NHSoO"
