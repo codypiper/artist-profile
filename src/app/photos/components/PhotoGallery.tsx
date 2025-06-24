@@ -5,8 +5,8 @@ import dynamic from "next/dynamic";
 import Image from "next/image";
 import { useState } from "react";
 import {
-  RenderImageContext,
-  RenderImageProps,
+  type RenderImageContext,
+  type RenderImageProps,
   RowsPhotoAlbum,
 } from "react-photo-album";
 import "react-photo-album/rows.css";
@@ -32,7 +32,7 @@ const renderImage = (
   </div>
 );
 
-const PhotoGallery = () => {
+const PhotoGallery: React.FC = () => {
   const [index, setIndex] = useState<number | null>(null);
 
   return (

@@ -3,7 +3,7 @@ interface FormResponseProps {
   message: string;
 }
 
-const FormResponse = ({ type, message }: FormResponseProps) => (
+const FormResponse: React.FC<FormResponseProps> = ({ type, message }) => (
   <span
     role={type === "success" ? "status" : "alert"}
     className={`block font-semibold italic ${type === "success" ? "text-success" : "text-error"}`}

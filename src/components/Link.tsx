@@ -1,5 +1,5 @@
 import NextLink from "next/link";
-import { MouseEventHandler } from "react";
+import type { MouseEventHandler } from "react";
 
 interface LinkProps {
   href: string;
@@ -11,7 +11,7 @@ interface LinkProps {
   label?: string;
 }
 
-const Link = ({
+const Link: React.FC<LinkProps> = ({
   href,
   children,
   disabled = false,
@@ -19,7 +19,7 @@ const Link = ({
   noShadow = false,
   onClick,
   label,
-}: LinkProps) => {
+}) => {
   return isInternal ? (
     <NextLink
       href={href}

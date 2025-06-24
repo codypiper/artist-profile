@@ -4,7 +4,7 @@ interface HamburgerProps {
   label: string;
 }
 
-const Hamburger = ({ isOpen, toggle, label }: HamburgerProps) => (
+const Hamburger: React.FC<HamburgerProps> = ({ isOpen, toggle, label }) => (
   <button
     type="button"
     onClick={toggle}

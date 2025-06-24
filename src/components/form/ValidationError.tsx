@@ -1,11 +1,11 @@
-interface FieldErrorProps {
+interface ValidationErrorProps {
   message: string;
 }
 
-const FieldError = ({ message }: FieldErrorProps) => (
+const ValidationError: React.FC<ValidationErrorProps> = ({ message }) => (
   <span role="alert" className="text-error block text-xs italic">
     {message}
   </span>
 );
 
-export default FieldError;
+export default ValidationError;

@@ -15,11 +15,13 @@ import EmailListForm from "./components/EmailListForm";
 import IconLink from "./components/IconLink";
 
 interface HomeProps {
-  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+  searchParams: Promise<{
+    subscribed?: string;
+  }>;
 }
 
-const Home = async ({ searchParams }: HomeProps) => {
-  const subscribed = (await searchParams).subscribed;
+const Home: React.FC<HomeProps> = async ({ searchParams }) => {
+  const isSubscribed = Boolean((await searchParams).subscribed);
 
   return (
     <main className="relative flex min-h-screen flex-col items-center justify-center px-4 py-40">
@@ -41,7 +43,7 @@ const Home = async ({ searchParams }: HomeProps) => {
           </p>
         </Link>
       </div>
-      <EmailListForm isSubscribed={Boolean(subscribed)} />
+      <EmailListForm isSubscribed={isSubscribed} />
       <ul className="mt-14 flex flex-row items-center gap-4">
         <li>
           <IconLink

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import LightboxComponent, {
-  LightboxExternalProps,
-  RenderSlideProps,
+  type LightboxExternalProps,
+  type RenderSlideProps,
 } from "yet-another-react-lightbox";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import "yet-another-react-lightbox/styles.css";
@@ -20,7 +20,7 @@ const renderSlide = ({ slide, rect }: RenderSlideProps) => (
   </div>
 );
 
-const Lightbox = (props: LightboxExternalProps) => (
+const Lightbox: React.FC<LightboxExternalProps> = (props) => (
   <LightboxComponent
     render={{ slide: renderSlide }}
     plugins={[Zoom]}

@@ -1,5 +1,5 @@
 import Link from "@/components/Link";
-import { Record as IRecord } from "@/lib/database";
+import type { Record as IRecord } from "@/lib/database";
 import Image from "next/image";
 
 type RecordLinkProps = IRecord;
@@ -10,7 +10,7 @@ const recordTypeLabel: Record<IRecord["type"], string> = {
   album: "Album",
 };
 
-const RecordLink = ({
+const RecordLink: React.FC<RecordLinkProps> = ({
   title,
   cover_art_filename,
   type,

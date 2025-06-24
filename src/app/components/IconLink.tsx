@@ -1,5 +1,5 @@
 import Link from "@/components/Link";
-import { IconProp } from "@fortawesome/fontawesome-svg-core";
+import type { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 interface IconLinkProps {
@@ -8,7 +8,7 @@ interface IconLinkProps {
   label: string;
 }
 
-const IconLink = ({ href, icon, label }: IconLinkProps) => (
+const IconLink: React.FC<IconLinkProps> = ({ href, icon, label }) => (
   <Link href={href} label={label}>
     <FontAwesomeIcon icon={icon} size="2xl" fixedWidth />
   </Link>

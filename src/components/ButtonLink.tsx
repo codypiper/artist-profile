@@ -3,11 +3,11 @@ import Link from "./Link";
 
 type ButtonLinkProps = React.ComponentProps<typeof Link>;
 
-const ButtonLink = ({
+const ButtonLink: React.FC<ButtonLinkProps> = ({
   children,
   noShadow = false,
   ...props
-}: ButtonLinkProps) => (
+}) => (
   <Link {...props} noShadow>
     <Button noShadow={noShadow}>{children}</Button>
   </Link>

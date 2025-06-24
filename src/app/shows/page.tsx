@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export const revalidate = 3600;
 
-const Shows = async () => {
+const Shows: React.FC = async () => {
   const shows = await database
     .selectFrom("shows")
     .selectAll()

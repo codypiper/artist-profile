@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import Hamburger from "./Hamburger";
 
-const NavHeader = () => {
+const NavHeader: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const isFullNav = useBreakpoint("sm");
   const pathname = usePathname();

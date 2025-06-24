@@ -3,7 +3,7 @@ interface YouTubePlayerProps {
   title: string;
 }
 
-const YouTubePlayer = ({ videoId, title }: YouTubePlayerProps) => (
+const YouTubePlayer: React.FC<YouTubePlayerProps> = ({ videoId, title }) => (
   <iframe
     src={`https://www.youtube.com/embed/${videoId}?rel=0`}
     title={title}

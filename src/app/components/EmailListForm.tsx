@@ -17,7 +17,9 @@ interface EmailListFormProps {
   isSubscribed?: boolean;
 }
 
-const EmailListForm = ({ isSubscribed = false }: EmailListFormProps) => {
+const EmailListForm: React.FC<EmailListFormProps> = ({
+  isSubscribed = false,
+}) => {
   const {
     register,
     handleSubmit,

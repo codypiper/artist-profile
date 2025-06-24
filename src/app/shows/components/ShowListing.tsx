@@ -3,13 +3,13 @@ import { Show } from "@/lib/database";
 
 type ShowListingProps = Show;
 
-const ShowListing = ({
+const ShowListing: React.FC<ShowListingProps> = ({
   name,
   venue,
   location,
   start_date,
   url,
-}: ShowListingProps) => (
+}) => (
   <li className="border-white/dim flex flex-row items-center border-b py-4 last:border-b-0 max-sm:justify-between sm:gap-8">
     <div className="drop-shadow-dark flex max-sm:flex-col sm:grow sm:justify-between sm:gap-4">
       <time

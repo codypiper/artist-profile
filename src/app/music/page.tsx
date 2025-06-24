@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Music - Cody Piper",
 };
 
-const Music = async () => {
+const Music: React.FC = async () => {
   const records = await database
     .selectFrom("records")
     .selectAll()

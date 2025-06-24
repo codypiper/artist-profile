@@ -5,12 +5,12 @@ interface ButtonProps {
   disabled?: boolean;
 }
 
-const Button = ({
+const Button: React.FC<ButtonProps> = ({
   children,
   type = "button",
   noShadow = false,
   disabled = false,
-}: ButtonProps) => (
+}) => (
   <button
     type={type}
     className={`h-fit w-fit shrink-0 grow-0 rounded-full border border-white px-4.5 py-2 transition duration-200 ${

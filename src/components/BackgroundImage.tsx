@@ -1,11 +1,11 @@
-import Image, { StaticImageData } from "next/image";
+import Image, { type StaticImageData } from "next/image";
 
 interface BackgroundImageProps {
   src: StaticImageData;
   alt: string;
 }
 
-const BackgroundImage = ({ src, alt }: BackgroundImageProps) => (
+const BackgroundImage: React.FC<BackgroundImageProps> = ({ src, alt }) => (
   <Image
     src={src}
     alt={alt}
