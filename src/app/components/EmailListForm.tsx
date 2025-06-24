@@ -84,7 +84,7 @@ const EmailListForm: React.FC<EmailListFormProps> = ({
           }}
           errors={errors.email}
         />
-        <Button type="submit" disabled={isSubmitting}>
+        <Button type="submit" isSubmitting={isSubmitting}>
           sign up
         </Button>
       </form>
