@@ -28,15 +28,15 @@ const Home: React.FC<HomeProps> = async ({ searchParams }) => {
       <h1 className="drop-shadow-dark mb-10 text-center text-4xl font-bold text-balance">
         {'"ODE TO A LOST LOVE" OUT NOW'}
       </h1>
-      <div className="mb-14 max-w-9/10">
+      <div className="mb-14">
         <Link href="https://music.codypipermedia.com/ode-to-a-lost-love">
           <Image
             className="w-full"
             src={odeToALostLove}
             alt={`"Ode to a Lost Love" artwork`}
             priority
-            height={350}
-            width={350}
+            height={300}
+            width={300}
           />
           <p className="opacity-dim drop-shadow-dark mt-1 text-center text-sm">
             click to listen
