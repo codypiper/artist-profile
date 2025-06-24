@@ -30,11 +30,7 @@ const NavHeader: React.FC = () => {
             <ul className="flex items-center justify-center gap-8">
               {routes.map((route) => (
                 <li key={route.name}>
-                  <Link
-                    href={route.path}
-                    disabled={pathname === route.path}
-                    isInternal
-                  >
+                  <Link href={route.path} disabled={pathname === route.path}>
                     {route.name}
                   </Link>
                 </li>
@@ -65,7 +61,6 @@ const NavHeader: React.FC = () => {
                   href={route.path}
                   disabled={pathname === route.path}
                   onClick={closeNav}
-                  isInternal
                 >
                   {route.name}
                 </Link>

@@ -8,9 +8,7 @@ const NotFound: React.FC = () => (
     <p className="drop-shadow-dark mb-10 text-center text-xl font-semibold">
       not found
     </p>
-    <Link href="/" isInternal>
-      return home
-    </Link>
+    <Link href="/">return home</Link>
     <BackgroundImage alt="Field with tall grass and flowers" src={grass} />
   </main>
 );
