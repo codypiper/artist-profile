@@ -4,7 +4,6 @@ import Button from "@/components/Button";
 import FormResponse from "@/components/form/FormResponse";
 import Input from "@/components/form/Input";
 import type EmailListFormInput from "@/types/form/EmailListFormInput";
-import { useSearchParams } from "next/navigation";
 import { useState } from "react";
 import {
   type SubmitErrorHandler,
@@ -14,10 +13,11 @@ import {
 
 type FormState = "success" | "confirm" | "error" | "none";
 
-const EmailListForm = () => {
-  const searchParams = useSearchParams();
-  const isSubscribed = Boolean(searchParams.get("subscribed"));
+interface EmailListFormProps {
+  isSubscribed?: boolean;
+}
 
+const EmailListForm = ({ isSubscribed = false }: EmailListFormProps) => {
   const {
     register,
     handleSubmit,
