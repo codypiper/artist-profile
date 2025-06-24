@@ -63,7 +63,7 @@ const EmailListForm: React.FC<EmailListFormProps> = ({
         join my email list 🙂
       </h1>
       <form
-        className="flex justify-center max-sm:flex-col max-sm:items-center max-sm:gap-1 sm:gap-4"
+        className="flex justify-center gap-1 max-sm:flex-col max-sm:items-center sm:gap-4"
         onSubmit={handleSubmit(onValidSubmit, onInvalidSubmit)}
       >
         <Input
