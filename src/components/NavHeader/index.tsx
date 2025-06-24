@@ -3,6 +3,7 @@
 import Link from "@/components/Link";
 import { useBreakpoint } from "@/hooks/useBreakpoint";
 import routes from "@/lib/routes";
+import clsx from "clsx";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import Hamburger from "./Hamburger";
@@ -16,10 +17,10 @@ const NavHeader: React.FC = () => {
   const closeNav = () => setIsOpen(false);
 
   useEffect(() => {
-    if (isFullNav) {
+    if (isFullNav && isOpen) {
       closeNav();
     }
-  }, [isFullNav]);
+  }, [isFullNav, isOpen]);
 
   return (
     <>
@@ -50,9 +51,10 @@ const NavHeader: React.FC = () => {
 
         {/* Hamburger nav dropdown */}
         <nav
-          className={`overflow-hidden transition-all duration-500 ease-in-out sm:hidden ${
-            isOpen ? "max-h-72 opacity-100" : "max-h-0 opacity-0"
-          }`}
+          className={clsx(
+            "overflow-hidden transition-all duration-500 ease-in-out sm:hidden",
+            isOpen ? "max-h-72 opacity-100" : "max-h-0 opacity-0",
+          )}
         >
           <ul className="flex flex-col items-center justify-center gap-6 py-4 text-2xl">
             {routes.map((route) => (
@@ -72,9 +74,10 @@ const NavHeader: React.FC = () => {
 
       {/* Dim background overlay */}
       <div
-        className={`fixed inset-0 z-40 bg-black transition duration-300 sm:hidden ${
-          isOpen ? "opacity-50" : "pointer-events-none opacity-0"
-        } `}
+        className={clsx(
+          "fixed inset-0 z-40 bg-black transition duration-300 sm:hidden",
+          isOpen ? "opacity-50" : "pointer-events-none opacity-0",
+        )}
         onClick={toggleNav}
         aria-hidden="true"
       />

@@ -10,6 +10,7 @@ const Hamburger: React.FC<HamburgerProps> = ({ isOpen, toggle, label }) => (
     onClick={toggle}
     aria-label={label}
     aria-expanded={isOpen}
+    aria-controls="mobile-nav"
     className="hover:drop-shadow-glow flex h-6 w-6 cursor-pointer flex-col items-center justify-center gap-[7px] transition duration-300"
   >
     <span
