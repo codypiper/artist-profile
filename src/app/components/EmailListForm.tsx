@@ -1,38 +1,33 @@
 "use client";
 
 import Button from "@/components/Button";
-import FormResponse from "@/components/form/FormResponse";
 import Input from "@/components/form/Input";
+import { useSnackbar } from "@/context/snackbar-context";
 import type EmailListFormInput from "@/types/form/EmailListFormInput";
-import { useState } from "react";
-import {
-  type SubmitErrorHandler,
-  type SubmitHandler,
-  useForm,
-} from "react-hook-form";
+import removeSearchParam from "@/utils/removeSearchParam";
+import { useSearchParams } from "next/navigation";
+import { useEffect } from "react";
+import { type SubmitHandler, useForm } from "react-hook-form";
 
-type FormState = "success" | "confirm" | "error" | "none";
-
-interface EmailListFormProps {
-  isSubscribed?: boolean;
-}
-
-const EmailListForm: React.FC<EmailListFormProps> = ({
-  isSubscribed = false,
-}) => {
+const EmailListForm: React.FC = () => {
   const {
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
     reset,
   } = useForm<EmailListFormInput>();
+  const searchParams = useSearchParams();
+  const { showSnackbar } = useSnackbar();
 
-  const initialFormState = isSubscribed ? "success" : "none";
-  const [formState, setFormState] = useState<FormState>(initialFormState);
+  useEffect(() => {
+    const isSubscribed = searchParams.get("subscribed") === "true";
+    if (isSubscribed) {
+      showSnackbar("success", "thank you for subscribing!");
+      removeSearchParam("subscribed");
+    }
+  }, [searchParams, showSnackbar]);
 
-  const onValidSubmit: SubmitHandler<EmailListFormInput> = async (data) => {
-    setFormState("none");
-
+  const onSubmit: SubmitHandler<EmailListFormInput> = async (data) => {
     try {
       const response = await fetch("/api/subscribe", {
         method: "POST",
@@ -46,25 +41,21 @@ const EmailListForm: React.FC<EmailListFormProps> = ({
         throw new Error(result.error || "Something went wrong.");
       }
 
-      setFormState("confirm");
+      showSnackbar("success", "confirmation email sent!");
       reset();
     } catch {
-      setFormState("error");
+      showSnackbar("error", "something went wrong. please try again.");
     }
   };
 
-  const onInvalidSubmit: SubmitErrorHandler<EmailListFormInput> = () => {
-    setFormState("none");
-  };
-
   return (
-    <div className="border-white/dim flex flex-col items-center border-y pt-14 pb-16 sm:pb-11.5">
+    <div className="border-white/dim flex flex-col items-center border-y pt-12 pb-14 sm:pb-9.5">
       <h1 className="mb-6 text-center text-xl font-semibold">
         join my email list 🙂
       </h1>
       <form
         className="flex justify-center gap-1 max-sm:flex-col max-sm:items-center sm:gap-4"
-        onSubmit={handleSubmit(onValidSubmit, onInvalidSubmit)}
+        onSubmit={handleSubmit(onSubmit)}
       >
         <Input
           name="email"
@@ -88,20 +79,6 @@ const EmailListForm: React.FC<EmailListFormProps> = ({
           sign up
         </Button>
       </form>
-      <div className="mt-1 h-0 sm:-mt-3 sm:h-4">
-        {formState === "success" && (
-          <FormResponse type="success" message="thank you for subscribing!" />
-        )}
-        {formState === "confirm" && (
-          <FormResponse type="success" message="confirmation email sent" />
-        )}
-        {formState === "error" && (
-          <FormResponse
-            type="error"
-            message="something went wrong. please try again."
-          />
-        )}
-      </div>
     </div>
   );
 };

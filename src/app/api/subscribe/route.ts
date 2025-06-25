@@ -1,5 +1,5 @@
 import type EmailListFormInput from "@/types/form/EmailListFormInput";
-import { addSubscriberToForm, createSubscriber } from "@/utils/kitApi";
+import { addSubscriberToForm, createSubscriber } from "@/utils/kit-api";
 import { type NextRequest, NextResponse } from "next/server";
 
 /**

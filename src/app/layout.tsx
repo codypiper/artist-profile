@@ -1,4 +1,5 @@
 import NavHeader from "@/components/NavHeader";
+import { SnackbarProvider } from "@/context/snackbar-context";
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import "./globals.css";
@@ -20,7 +21,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => (
   <html lang="en">
     <body className={`bg-black text-white ${manrope.className}`}>
       <NavHeader />
-      {children}
+      <SnackbarProvider>{children}</SnackbarProvider>
     </body>
   </html>
 );
