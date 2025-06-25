@@ -4,27 +4,28 @@ import Button from "@/components/Button";
 import Input from "@/components/form/Input";
 import type EmailListFormInput from "@/types/form/EmailListFormInput";
 import removeSearchParam from "@/utils/removeSearchParam";
-import { useSearchParams } from "next/navigation";
 import { useEffect } from "react";
 import { type SubmitHandler, useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 
-const EmailListForm: React.FC = () => {
+interface EmailListFormProps {
+  isSubscribed?: boolean;
+}
+
+const EmailListForm: React.FC<EmailListFormProps> = ({ isSubscribed }) => {
   const {
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
     reset,
   } = useForm<EmailListFormInput>();
-  const searchParams = useSearchParams();
 
   useEffect(() => {
-    const isSubscribed = searchParams.get("subscribed") === "true";
     if (isSubscribed) {
       toast.success("thank you for subscribing!");
       removeSearchParam("subscribed");
     }
-  }, [searchParams]);
+  }, [isSubscribed]);
 
   const onSubmit: SubmitHandler<EmailListFormInput> = async (data) => {
     try {
