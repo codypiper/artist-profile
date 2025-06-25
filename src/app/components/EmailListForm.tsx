@@ -2,12 +2,12 @@
 
 import Button from "@/components/Button";
 import Input from "@/components/form/Input";
-import { useSnackbar } from "@/context/snackbar-context";
 import type EmailListFormInput from "@/types/form/EmailListFormInput";
 import removeSearchParam from "@/utils/removeSearchParam";
 import { useSearchParams } from "next/navigation";
 import { useEffect } from "react";
 import { type SubmitHandler, useForm } from "react-hook-form";
+import toast from "react-hot-toast";
 
 const EmailListForm: React.FC = () => {
   const {
@@ -17,15 +17,14 @@ const EmailListForm: React.FC = () => {
     reset,
   } = useForm<EmailListFormInput>();
   const searchParams = useSearchParams();
-  const { showSnackbar } = useSnackbar();
 
   useEffect(() => {
     const isSubscribed = searchParams.get("subscribed") === "true";
     if (isSubscribed) {
-      showSnackbar("success", "thank you for subscribing!");
+      toast.success("thank you for subscribing!");
       removeSearchParam("subscribed");
     }
-  }, [searchParams, showSnackbar]);
+  }, [searchParams]);
 
   const onSubmit: SubmitHandler<EmailListFormInput> = async (data) => {
     try {
@@ -41,10 +40,10 @@ const EmailListForm: React.FC = () => {
         throw new Error(result.error || "Something went wrong.");
       }
 
-      showSnackbar("success", "confirmation email sent!");
+      toast.success("confirmation email sent!");
       reset();
     } catch {
-      showSnackbar("error", "something went wrong. please try again.");
+      toast.error("something went wrong.\nplease try again.");
     }
   };
 
