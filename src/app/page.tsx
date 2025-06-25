@@ -11,6 +11,7 @@ import {
 import candle from "@pub/images/backgrounds/candle.jpg";
 import odeToALostLove from "@pub/images/records/ode-to-a-lost-love.jpg";
 import Image from "next/image";
+import { Suspense } from "react";
 import EmailListForm from "./components/EmailListForm";
 import IconLink from "./components/IconLink";
 
@@ -34,7 +35,9 @@ const Home: React.FC = () => (
         </p>
       </Link>
     </div>
-    <EmailListForm />
+    <Suspense>
+      <EmailListForm />
+    </Suspense>
     <ul className="mt-12 flex flex-row items-center gap-4">
       <li>
         <IconLink
