@@ -32,8 +32,8 @@ const ShowListing: React.FC<ShowListingProps> = ({
         </div>
       </time>
       <div className="text-left text-balance max-sm:ml-4 sm:grow">{name}</div>
-      <div className="font-thin max-sm:ml-4 max-sm:flex max-sm:justify-start max-sm:gap-2 sm:grow sm:text-right">
-        <div className="text-balance">{venue}</div>
+      <div className="font-thin max-sm:ml-4 sm:grow sm:text-right">
+        <div className="pl-4 -indent-4 text-balance">{venue}</div>
         <div className="opacity-dim">{location}</div>
       </div>
     </div>
