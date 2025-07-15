@@ -33,7 +33,7 @@ const Shows: React.FC = async () => {
             ))}
           </ol>
           <p className="opacity-dim drop-shadow-dark mt-12 text-xs italic">
-            * times are displayed using the local timezone of the venue
+            times are displayed using the local timezone of the venue
           </p>
         </>
       )}
