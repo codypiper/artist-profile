@@ -9,7 +9,7 @@ import {
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 import candle from "@pub/images/backgrounds/candle.jpg";
-import odeToALostLove from "@pub/images/records/ode-to-a-lost-love.jpg";
+import leakingMe from "@pub/images/records/leaking-me.jpg";
 import Image from "next/image";
 import EmailListForm from "./components/EmailListForm";
 import IconLink from "./components/IconLink";
@@ -26,14 +26,14 @@ const Home: React.FC<HomeProps> = async ({ searchParams }) => {
   return (
     <main className="relative flex min-h-screen flex-col items-center justify-center px-4 py-40">
       <h1 className="drop-shadow-dark mb-10 text-center text-4xl font-bold text-balance">
-        {'"ODE TO A LOST LOVE" OUT NOW'}
+        {'"LEAKING ME" OUT NOW'}
       </h1>
       <div className="mb-12">
-        <Link href="https://music.codypipermedia.com/ode-to-a-lost-love">
+        <Link href="https://music.codypipermedia.com/leaking-me">
           <Image
             className="w-full"
-            src={odeToALostLove}
-            alt={`"Ode to a Lost Love" artwork`}
+            src={leakingMe}
+            alt={`"Leaking Me" artwork`}
             priority
             height={300}
             width={300}
