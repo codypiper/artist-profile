@@ -1,4 +1,5 @@
 import BackgroundImage from "@/components/BackgroundImage";
+import Link from "@/components/Link";
 import {
   faFacebook,
   faInstagram,
@@ -25,18 +26,23 @@ const Home: React.FC<HomeProps> = async ({ searchParams }) => {
   return (
     <main className="relative flex min-h-screen flex-col items-center justify-center px-4 py-40">
       <h1 className="drop-shadow-dark mb-10 text-center text-4xl font-bold text-balance">
-        debut LP <i className="mr-1 italic">Revealed</i> out October 24th
+        debut LP <i className="mr-1 italic">Revealed</i> out now
       </h1>
       <div className="mb-12">
-        <Image
-          className="w-full"
-          src={revealed}
-          alt={`"Revealed" artwork`}
-          priority
-          height={360}
-          width={360}
-          quality={100}
-        />
+        <Link href="https://music.codypipermedia.com/revealed-album">
+          <Image
+            className="w-full"
+            src={revealed}
+            alt={`"Revealed" artwork`}
+            priority
+            height={360}
+            width={360}
+            quality={100}
+          />
+          <p className="opacity-dim drop-shadow-dark mt-1 text-center text-sm">
+            click to listen
+          </p>
+        </Link>
       </div>
       <EmailListForm isSubscribed={isSubscribed} />
       <ul className="mt-12 flex flex-row items-center gap-4">

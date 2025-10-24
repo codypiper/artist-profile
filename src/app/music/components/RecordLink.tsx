@@ -26,6 +26,7 @@ const RecordLink: React.FC<RecordLinkProps> = ({
         priority
         height={250}
         width={250}
+        quality={100}
       />
       <h2 className="mb-1 text-center font-bold">{title}</h2>
       <h3 className="text-center text-sm font-thin italic">
