@@ -21,7 +21,7 @@ const routes: Route[] = [
     href: "/shows",
   },
   {
-    name: "store",
+    name: "shop",
     href: "https://codypiper.myshopify.com",
   },
 ];
