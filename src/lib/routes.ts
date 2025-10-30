@@ -1,28 +1,28 @@
 interface Route {
   name: string;
-  path: string;
+  href: string;
 }
 
 const routes: Route[] = [
   {
     name: "home",
-    path: "/",
+    href: "/",
   },
   {
     name: "music",
-    path: "/music",
+    href: "/music",
   },
   {
     name: "videos",
-    path: "/videos",
-  },
-  {
-    name: "photos",
-    path: "/photos",
+    href: "/videos",
   },
   {
     name: "shows",
-    path: "/shows",
+    href: "/shows",
+  },
+  {
+    name: "store",
+    href: "https://codypiper.myshopify.com",
   },
 ];
 

@@ -31,7 +31,7 @@ const NavHeader: React.FC = () => {
             <ul className="flex items-center justify-center gap-8">
               {routes.map((route) => (
                 <li key={route.name}>
-                  <Link href={route.path} disabled={pathname === route.path}>
+                  <Link href={route.href} disabled={pathname === route.href}>
                     {route.name}
                   </Link>
                 </li>
@@ -53,15 +53,15 @@ const NavHeader: React.FC = () => {
         <nav
           className={clsx(
             "overflow-hidden transition-all duration-500 ease-in-out sm:hidden",
-            isOpen ? "max-h-72 opacity-100" : "max-h-0 opacity-0",
+            isOpen ? "max-h-84 opacity-100" : "max-h-0 opacity-0",
           )}
         >
           <ul className="flex flex-col items-center justify-center gap-6 py-4 text-2xl">
             {routes.map((route) => (
               <li key={route.name}>
                 <Link
-                  href={route.path}
-                  disabled={pathname === route.path}
+                  href={route.href}
+                  disabled={pathname === route.href}
                   onClick={closeNav}
                 >
                   {route.name}
