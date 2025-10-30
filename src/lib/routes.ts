@@ -22,7 +22,7 @@ const routes: Route[] = [
   },
   {
     name: "shop",
-    href: "https://codypiper.myshopify.com",
+    href: "https://shop.codypipermedia.com",
   },
 ];
 
