@@ -9,7 +9,7 @@ import {
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 import candle from "@pub/images/backgrounds/candle.jpg";
-import revealed from "@pub/images/records/revealed.jpg";
+import rainMan from "@pub/images/records/rain-man.jpg";
 import Image from "next/image";
 import EmailListForm from "./components/EmailListForm";
 import IconLink from "./components/IconLink";
@@ -26,14 +26,14 @@ const Home: React.FC<HomeProps> = async ({ searchParams }) => {
   return (
     <main className="relative flex min-h-screen flex-col items-center justify-center px-4 py-40">
       <h1 className="drop-shadow-dark mb-10 text-center text-4xl font-bold text-balance">
-        debut LP <i className="mr-1 italic">Revealed</i> out now
+        NEW SINGLE "RAIN MAN" OUT NOW
       </h1>
       <div className="mb-12">
-        <Link href="https://music.codypipermedia.com/revealed-album">
+        <Link href="https://music.codypipermedia.com/rain-man">
           <Image
             className="w-full"
-            src={revealed}
-            alt={`"Revealed" artwork`}
+            src={rainMan}
+            alt={`"Rain Man" artwork`}
             priority
             height={360}
             width={360}
