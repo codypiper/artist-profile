@@ -1,5 +1,6 @@
-import { Kysely, PostgresDialect, type Selectable } from "kysely";
-import { Pool } from "pg";
+import { neon } from "@neondatabase/serverless";
+import { Kysely, type Selectable } from "kysely";
+import { NeonDialect } from "kysely-neon";
 
 interface Database {
   records: RecordsTable;
@@ -38,14 +39,12 @@ export type Video = Selectable<VideosTable>;
 const databaseUrl = process.env.DATABASE_URL;
 
 if (!databaseUrl) {
-  throw new Error("DATABASE_URL is not configured");
+  throw new Error("DATABASE_URL is not configured.");
 }
 
 const db = new Kysely<Database>({
-  dialect: new PostgresDialect({
-    pool: new Pool({
-      connectionString: databaseUrl,
-    }),
+  dialect: new NeonDialect({
+    neon: neon(databaseUrl),
   }),
 });
 
