@@ -1,5 +1,5 @@
-import { createKysely } from "@vercel/postgres-kysely";
-import { Selectable } from "kysely";
+import { Kysely, PostgresDialect, type Selectable } from "kysely";
+import { Pool } from "pg";
 
 interface Database {
   records: RecordsTable;
@@ -35,4 +35,18 @@ export type Record = Selectable<RecordsTable>;
 export type Show = Selectable<ShowsTable>;
 export type Video = Selectable<VideosTable>;
 
-export default createKysely<Database>();
+const databaseUrl = process.env.DATABASE_URL;
+
+if (!databaseUrl) {
+  throw new Error("DATABASE_URL is not configured");
+}
+
+const db = new Kysely<Database>({
+  dialect: new PostgresDialect({
+    pool: new Pool({
+      connectionString: databaseUrl,
+    }),
+  }),
+});
+
+export default db;
