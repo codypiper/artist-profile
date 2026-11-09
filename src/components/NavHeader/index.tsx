@@ -5,7 +5,7 @@ import { useBreakpoint } from "@/hooks/useBreakpoint";
 import routes from "@/lib/routes";
 import clsx from "clsx";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Hamburger from "./Hamburger";
 
 const NavHeader: React.FC = () => {
@@ -16,11 +16,10 @@ const NavHeader: React.FC = () => {
   const toggleNav = () => setIsOpen(!isOpen);
   const closeNav = () => setIsOpen(false);
 
-  useEffect(() => {
-    if (isFullNav && isOpen) {
-      closeNav();
-    }
-  }, [isFullNav, isOpen]);
+  // Reset during render so the menu is closed if the viewport grows to full nav
+  if (isFullNav && isOpen) {
+    setIsOpen(false);
+  }
 
   return (
     <>
