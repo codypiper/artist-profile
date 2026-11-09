@@ -2,7 +2,7 @@
   "name": "artist-profile",
   "private": true,
   "engines": {
-    "node": ">=20.12"
+    "node": ">=22.13"
   },
   "scripts": {
     "dev": "next dev",
