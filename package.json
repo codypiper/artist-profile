@@ -6,7 +6,7 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "eslint . && next build",
     "start": "next start",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
