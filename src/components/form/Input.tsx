@@ -44,7 +44,7 @@ const Input = <T extends FieldValues>({
         placeholder={placeholder}
         {...register(name, options)}
         className={clsx(
-          "placeholder:white/dim text-md min-w-80 rounded-xs border bg-black/50 p-2 text-center text-white backdrop-blur-sm placeholder:italic focus:ring focus:ring-white focus:outline-none",
+          "min-w-80 rounded-xs border bg-black/dim p-2 text-center text-white backdrop-blur-sm placeholder:text-white/dim placeholder:italic focus:ring focus:ring-white focus:outline-none",
           isError ? "border-error" : "border-white",
         )}
       />

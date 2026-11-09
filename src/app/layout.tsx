@@ -27,7 +27,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => (
         containerClassName="m-4"
         toastOptions={{
           duration: 5000,
-          className: "text-md font-medium rounded-md drop-shadow-dark",
+          className: "font-medium rounded-md drop-shadow-dark",
         }}
       />
     </body>

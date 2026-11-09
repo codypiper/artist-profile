@@ -4,7 +4,7 @@ interface ValidationErrorProps {
 }
 
 const ValidationError: React.FC<ValidationErrorProps> = ({ id, message }) => (
-  <span id={id} role="alert" className="text-error block text-xs italic">
+  <span id={id} role="alert" className="block text-xs text-error italic">
     {message}
   </span>
 );
