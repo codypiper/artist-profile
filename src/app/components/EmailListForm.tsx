@@ -49,7 +49,7 @@ const EmailListForm: React.FC<EmailListFormProps> = ({ isSubscribed }) => {
   };
 
   return (
-    <div className="border-white/dim flex flex-col items-center border-y pt-12 pb-14 sm:pb-9.5">
+    <div className="flex flex-col items-center border-y border-white/dim pt-12 pb-14 sm:pb-9.5">
       <h1 className="mb-6 text-center text-xl font-semibold">
         join my email list 🙂
       </h1>

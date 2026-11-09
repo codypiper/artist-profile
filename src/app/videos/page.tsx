@@ -17,11 +17,11 @@ const Videos: React.FC = async () => {
 
   return (
     <main className="relative flex min-h-screen flex-col items-center justify-center py-40">
-      <h1 className="drop-shadow-dark mb-10 text-center text-4xl font-bold">
+      <h1 className="mb-10 text-center text-4xl font-bold drop-shadow-dark">
         VIDEOS
       </h1>
       {videos.length === 0 ? (
-        <p className="drop-shadow-dark italic">no featured videos</p>
+        <p className="italic drop-shadow-dark">no featured videos</p>
       ) : (
         <ol className="flex w-full max-w-4xl flex-col">
           {videos.map((video) => (

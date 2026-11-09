@@ -26,7 +26,7 @@ const Button: React.FC<ButtonProps> = ({
       aria-busy={isSubmitting}
       className={clsx(
         "relative flex h-fit w-fit shrink-0 grow-0 items-center justify-center gap-2 rounded-full border border-white px-4.5 py-2 transition duration-200",
-        isDisabled ? "opacity-dim cursor-not-allowed" : "cursor-pointer",
+        isDisabled ? "cursor-not-allowed opacity-dim" : "cursor-pointer",
         hasShadow && "drop-shadow-dark hover:drop-shadow-glow",
       )}
     >

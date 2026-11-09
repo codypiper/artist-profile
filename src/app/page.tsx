@@ -23,7 +23,7 @@ const Home: React.FC<HomeProps> = async ({ searchParams }) => {
 
   return (
     <main className="relative flex min-h-screen flex-col items-center justify-center px-4 py-40">
-      <h1 className="drop-shadow-dark mb-4 text-center text-4xl font-bold text-balance">
+      <h1 className="mb-4 text-center text-4xl font-bold text-balance drop-shadow-dark">
         RAIN MAN VIDEO
       </h1>
       <div className="mb-12 w-full max-w-3xl">

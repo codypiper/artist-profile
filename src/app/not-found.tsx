@@ -4,8 +4,8 @@ import grass from "@pub/images/backgrounds/grass.jpg";
 
 const NotFound: React.FC = () => (
   <main className="relative flex min-h-screen flex-col items-center justify-center py-40">
-    <h1 className="drop-shadow-dark text-center text-5xl font-bold">404</h1>
-    <p className="drop-shadow-dark mb-10 text-center text-xl font-semibold">
+    <h1 className="text-center text-5xl font-bold drop-shadow-dark">404</h1>
+    <p className="mb-10 text-center text-xl font-semibold drop-shadow-dark">
       not found
     </p>
     <Link href="/">return home</Link>

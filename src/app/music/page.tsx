@@ -17,7 +17,7 @@ const Music: React.FC = async () => {
 
   return (
     <main className="relative flex min-h-screen flex-col items-center justify-center px-6 py-40">
-      <h1 className="drop-shadow-dark mb-10 text-center text-3xl font-bold">
+      <h1 className="mb-10 text-center text-3xl font-bold drop-shadow-dark">
         MUSIC
       </h1>
       <ol className="flex max-w-4xl flex-wrap justify-center gap-8">
